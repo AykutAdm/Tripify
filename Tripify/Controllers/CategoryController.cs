@@ -49,10 +49,10 @@ namespace Tripify.Controllers
             return RedirectToAction("CategoryList");
         }
 
-        //public async Task<IActionResult> RemoveCategory(string id)
-        //{
-        //    var value = await _categoryService.GetCategoryByIdAsync(id);
-        //    await _categoryService.DeleteCategoryAsync(value);
-        //}
+        public async Task<IActionResult> RemoveCategory(string id)
+        {
+            await _categoryService.DeleteCategoryAsync(id);
+            return RedirectToAction("CategoryList");
+        }
     }
 }

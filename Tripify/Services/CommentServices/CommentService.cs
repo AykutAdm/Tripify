@@ -42,6 +42,12 @@ namespace Tripify.Services.CommentServices
             return _mapper.Map<GetCommentByIdDto>(value);
         }
 
+        public async Task<List<ResultCommentListByTourIdDto>> GetCommentsByTourIdAsync(string id)
+        {
+            var values = await _commentCollection.Find(x => x.TourId == id).ToListAsync();
+            return _mapper.Map<List<ResultCommentListByTourIdDto>>(values);
+        }
+
         public async Task UpdateCommentAsync(UpdateCommentDto updateCommentDto)
         {
             var value = _mapper.Map<Comment>(updateCommentDto);

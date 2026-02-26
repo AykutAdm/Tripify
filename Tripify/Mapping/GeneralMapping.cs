@@ -24,6 +24,7 @@ namespace Tripify.Mapping
             CreateMap<Comment, CreateCommentDto>().ReverseMap();
             CreateMap<Comment, UpdateCommentDto>().ReverseMap();
             CreateMap<Comment, GetCommentByIdDto>().ReverseMap();
+            CreateMap<Comment, ResultCommentListByTourIdDto>().ReverseMap();
         }
     }
 }
