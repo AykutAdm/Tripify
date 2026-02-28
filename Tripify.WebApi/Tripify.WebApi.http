@@ -1,0 +1,6 @@
+@Tripify.WebApi_HostAddress = http://localhost:5166
+
+GET {{Tripify.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

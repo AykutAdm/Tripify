@@ -1,0 +1,28 @@
+@{
+    Layout = null;
+    int currentPage = int.Parse(Context.Request.Query["page"].FirstOrDefault() ?? "1");
+}
+
+<!DOCTYPE html>
+
+@await Component.InvokeAsync("_TourHeadComponentPartial")
+
+@await Component.InvokeAsync("_TourHeaderComponentPartial")
+
+@await Component.InvokeAsync("_TourListComponentPartial", new { page = currentPage })
+
+@await Component.InvokeAsync("_TourFooterComponentPartial")
+
+<div id="back-to-top">
+    <a href="#"></a>
+</div>
+
+<div id="search1">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" value="" placeholder="type keyword(s) here" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+@await Component.InvokeAsync("_TourScriptsComponentPartial")
