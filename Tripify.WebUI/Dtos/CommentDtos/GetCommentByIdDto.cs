@@ -1,0 +1,16 @@
+namespace Tripify.WebUI.Dtos.CommentDtos
+{
+    public class GetCommentByIdDto
+    {
+        public string CommentId { get; set; }
+        public string Headline { get; set; }
+        public string CommentDetail { get; set; }
+        public int Score { get; set; }
+        public DateTime CommentDate { get; set; }
+        public bool IsStatus { get; set; }
+        public string TourId { get; set; }
+        public string NameSurname { get; set; }
+        public string ImageUrl { get; set; }
+    }
+}
+

@@ -1,0 +1,53 @@
+@model Tripify.WebUI.Dtos.CommentDtos.CreateCommentDto
+
+<div class="single-add-review mb-4" style="background: #f8f9fa; padding: 30px; border-radius: 8px;">
+    <h4 class="mb-4">
+        <i class="fa fa-edit me-2"></i>
+        Yorum Yap
+    </h4>
+
+    <form method="post" asp-controller="Tour" asp-action="MakeComment">
+        <input type="hidden" asp-for="TourId" />
+        <input type="hidden" asp-for="Score" value="5" />
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Adınız Soyadınız <span class="text-danger">*</span></label>
+                <input type="text" asp-for="NameSurname" class="form-control" placeholder="Adınız Soyadınız" required />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Fotoğraf URL (Opsiyonel)</label>
+                <input type="text" asp-for="ImageUrl" class="form-control" placeholder="https://example.com/photo.jpg" />
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label class="form-label">Başlık <span class="text-danger">*</span></label>
+                <input type="text" asp-for="Headline" class="form-control" placeholder="Yorumunuz için bir başlık" required />
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label class="form-label">Yorumunuz <span class="text-danger">*</span></label>
+                <textarea asp-for="CommentDetail" class="form-control" rows="4" placeholder="Deneyiminizi bizimle paylaşın..." required></textarea>
+            </div>
+
+            <div class="col-md-12 mb-3">
+                <label class="form-label">Puanınız</label>
+                <div class="d-flex align-items-center">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <i class="fa fa-star me-1" style="font-size: 24px; color: #FFD700;"></i>
+                    }
+                    <span class="ms-2 text-muted">(5 Yıldız - Mükemmel)</span>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <button type="submit" class="nir-btn w-100">
+                    <i class="fa fa-paper-plane me-2"></i>
+                    Yorumu Gönder
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<body>
+    <section class="breadcrumb-main pb-20 pt-14" style="background-image: url(/travelin/travelin/images/bg/paris.jpg)">
+        <div class="section-shape section-shape1 top-inherit bottom-0" style="background-image: url(/travelin/travelin/images/shape8.png)"></div>
+        <div class="breadcrumb-outer">
+            <div class="container">
+                <div class="breadcrumb-content text-center">
+                    <h1 class="mb-3">@Localizer["About_Title"]</h1>
+                    <nav aria-label="breadcrumb" class="d-block">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/Default/Index/">@Localizer["Nav_Home"]</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">@Localizer["About_Title"]</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="dot-overlay"></div>
+    </section>
+
+    @await Component.InvokeAsync("_AboutComponentPartial")
+
+    @await Component.InvokeAsync("_AboutWhyUsComponentPartial")
+
+    @await Component.InvokeAsync("_AboutOurTeamComponentPartial")
+
+    @await Component.InvokeAsync("_AboutTestimonialComponentPartial")
+
+    <!-- Back to top start -->
+    <div id="back-to-top">
+        <a href="#"></a>
+    </div>
+    <!-- Back to top ends -->
+    <!-- search popup -->
+    <div id="search1">
+        <button type="button" class="close">×</button>
+        <form>
+            <input type="search" value="" placeholder="type keyword(s) here" />
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+</body>

@@ -6,7 +6,7 @@
 
 @section Styles {
     <style>
-        /* ¦¦ PAGE HEADER ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+
         .page-header {
             display: flex;
             align-items: flex-start;
@@ -20,7 +20,7 @@
             font-family: var(--font-display);
             font-size: 1.6rem;
             font-weight: 800;
-            color: #1a202c;
+            color: var(--text-primary);
             letter-spacing: -.03em;
             line-height: 1;
         }
@@ -35,16 +35,16 @@
             font-size: .8rem;
         }
 
-            .breadcrumb-item a {
-                color: #2563eb;
-                text-decoration: none;
-            }
+        .create-tour-page .breadcrumb-item a {
+            color: var(--accent-strong);
+            text-decoration: none;
+        }
 
-            .breadcrumb-item.active {
-                color: #718096;
-            }
+        .create-tour-page .breadcrumb-item.active {
+            color: var(--text-muted);
+        }
 
-        /* ¦¦ LAYOUT GRID ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 340px;
@@ -52,77 +52,78 @@
             align-items: start;
         }
 
-        /* ¦¦ SECTION CARD ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
-        .form-section {
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
+
+        .create-tour-page .form-section {
+            background: linear-gradient(135deg, rgba(18,18,24,.6), rgba(14,14,20,.65));
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 2px 12px rgba(0,0,0,.05);
+            box-shadow: 0 16px 40px rgba(0,0,0,.2);
             margin-bottom: 1.5rem;
         }
 
-            .form-section:last-child {
+            .create-tour-page .form-section:last-child {
                 margin-bottom: 0;
             }
 
-        .section-header {
+        .create-tour-page .section-header {
             display: flex;
             align-items: center;
-            gap: .75rem;
+            gap: .85rem;
             padding: 1.1rem 1.5rem;
-            border-bottom: 1px solid #f0f4f8;
-            background: #fafbfc;
+            border-bottom: 1px solid rgba(255,255,255,.06);
+            background: rgba(24,24,32,.5);
         }
 
-        .section-icon {
-            width: 34px;
-            height: 34px;
-            border-radius: 9px;
+        .create-tour-page .section-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
             display: grid;
             place-items: center;
-            font-size: .95rem;
+            font-size: 1rem;
             flex-shrink: 0;
         }
 
-            .section-icon.blue {
-                background: #eff6ff;
-                color: #2563eb;
+            .create-tour-page .section-icon.blue {
+                background: rgba(56,189,248,.2);
+                color: #38bdf8;
             }
 
-            .section-icon.amber {
-                background: #fffbeb;
-                color: #d97706;
+            .create-tour-page .section-icon.amber {
+                background: rgba(251,191,36,.2);
+                color: #fbbf24;
             }
 
-            .section-icon.green {
-                background: #f0fdf4;
-                color: #16a34a;
+            .create-tour-page .section-icon.green {
+                background: rgba(34,197,94,.2);
+                color: #4ade80;
             }
 
-            .section-icon.purple {
-                background: #faf5ff;
-                color: #7c3aed;
+            .create-tour-page .section-icon.purple {
+                background: rgba(139,92,246,.2);
+                color: #a78bfa;
             }
 
-        .section-title {
+        .create-tour-page .section-title {
             font-family: var(--font-display);
             font-weight: 700;
-            font-size: .92rem;
-            color: #1a202c;
+            font-size: .95rem;
+            color: #ffffff;
         }
 
-        .section-subtitle {
+        .create-tour-page .section-subtitle {
             font-size: .75rem;
-            color: #a0aec0;
-            margin-top: 1px;
+            color: var(--text-muted);
+            margin-top: 2px;
         }
 
-        .section-body {
+        .create-tour-page .section-body {
             padding: 1.5rem;
         }
 
-        /* ¦¦ FORM CONTROLS ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+
         .field-group {
             margin-bottom: 1.25rem;
         }
@@ -155,14 +156,14 @@
         }
 
         .form-control, .form-select {
-            border: 1.5px solid #e2e8f0;
+            border: 1.5px solid #1f2937;
             border-radius: 9px;
             padding: .6rem .875rem;
             font-size: .875rem;
             font-family: var(--font-body);
-            color: #1a202c;
-            background: #fff;
-            transition: border-color .15s, box-shadow .15s;
+            color: var(--text-primary);
+            background: #020617;
+            transition: border-color .15s, box-shadow .15s, background .15s;
             width: 100%;
         }
 
@@ -220,7 +221,7 @@
                 color: #e53e3e;
             }
 
-        /* ¦¦ DURATION FIELD ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+
         .duration-builder {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -241,76 +242,78 @@
                 letter-spacing: .06em;
             }
 
-        /* ¦¦ IMAGE UPLOAD ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
-        .image-upload-zone {
-            border: 2px dashed #cbd5e0;
+
+        .create-tour-page .image-upload-zone {
+            border: 2px dashed rgba(255,255,255,.2);
             border-radius: 12px;
             padding: 2rem 1.5rem;
             text-align: center;
             cursor: pointer;
             transition: all .2s;
-            background: #fafbfc;
+            background: rgba(24,24,32,.4);
             position: relative;
         }
 
-            .image-upload-zone:hover, .image-upload-zone.dragover {
-                border-color: #2563eb;
-                background: #eff6ff;
+            .create-tour-page .image-upload-zone:hover,
+            .create-tour-page .image-upload-zone.dragover {
+                border-color: var(--accent-strong);
+                background: rgba(56,189,248,.1);
             }
 
-            .image-upload-zone input[type="file"] {
-                position: absolute;
-                inset: 0;
-                opacity: 0;
-                cursor: pointer;
-                width: 100%;
-                height: 100%;
-            }
+        .image-upload-zone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
 
-        .upload-icon {
+        .create-tour-page .upload-icon {
             width: 48px;
             height: 48px;
             border-radius: 12px;
-            background: #eff6ff;
+            background: rgba(56,189,248,.2);
             display: grid;
             place-items: center;
             margin: 0 auto .75rem;
             font-size: 1.3rem;
-            color: #2563eb;
+            color: #38bdf8;
             transition: transform .2s;
         }
 
-        .image-upload-zone:hover .upload-icon {
+        .create-tour-page .image-upload-zone:hover .upload-icon {
             transform: translateY(-2px);
         }
 
-        .upload-title {
+        .create-tour-page .upload-title {
             font-weight: 600;
-            font-size: .875rem;
-            color: #2d3748;
-            margin-bottom: .3rem;
+            font-size: .9rem;
+            color: #f1f5f9;
+            margin-bottom: .35rem;
         }
 
-        .upload-sub {
-            font-size: .75rem;
-            color: #a0aec0;
+        .create-tour-page .upload-sub {
+            font-size: .76rem;
+            color: var(--text-muted);
         }
 
-        .image-preview-box {
+        .create-tour-page .image-preview-box {
             display: none;
             position: relative;
             border-radius: 12px;
             overflow: hidden;
-            background: #f0f4f8;
+            background: rgba(24,24,32,.6);
             aspect-ratio: 16/9;
+            border: 1px solid rgba(255,255,255,.06);
         }
 
-            .image-preview-box img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
+        .image-preview-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
         .preview-overlay {
             position: absolute;
@@ -327,119 +330,117 @@
             opacity: 1;
         }
 
-        .preview-remove {
-            background: #fff;
+        .create-tour-page .preview-remove {
+            background: rgba(248,113,113,.9);
             border: none;
             border-radius: 8px;
-            padding: .4rem .85rem;
-            font-size: .78rem;
+            padding: .45rem .9rem;
+            font-size: .8rem;
             font-weight: 600;
             cursor: pointer;
-            color: #e53e3e;
+            color: #fff;
             display: flex;
             align-items: center;
-            gap: .35rem;
+            gap: .4rem;
         }
 
-        /* ¦¦ URL INPUT ALT ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
-        .url-preview-thumb {
+
+        .create-tour-page .url-preview-thumb {
             width: 100%;
             height: 140px;
             object-fit: cover;
             border-radius: 10px;
-            border: 1.5px solid #e2e8f0;
+            border: 1px solid rgba(255,255,255,.1);
             display: none;
-            margin-top: .6rem;
+            margin-top: .65rem;
         }
 
-        /* ¦¦ CAPACITY STEPPER ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
-        .stepper {
+        .create-tour-page .create-tour-page .stepper {
             display: flex;
             align-items: center;
             gap: 0;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 9px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 10px;
             overflow: hidden;
             width: 100%;
         }
 
-        .stepper-btn {
+        .create-tour-page .create-tour-page .stepper-btn {
             width: 42px;
             height: 42px;
-            background: #f8fafc;
+            background: rgba(255,255,255,.05);
             border: none;
             cursor: pointer;
             font-size: 1.1rem;
-            color: #4a5568;
-            transition: background .12s;
+            color: #94a3b8;
+            transition: all .2s;
             flex-shrink: 0;
             display: grid;
             place-items: center;
         }
 
-            .stepper-btn:hover {
-                background: #edf2f7;
-            }
+        .create-tour-page .stepper-btn:hover {
+            background: rgba(56,189,248,.15);
+            color: #38bdf8;
+        }
 
-            .stepper-btn:active {
-                background: #e2e8f0;
-            }
-
-        .stepper input {
+        .create-tour-page .stepper input {
             flex: 1;
             border: none;
             text-align: center;
             font-size: .9rem;
             font-weight: 600;
-            color: #1a202c;
+            color: #ffffff;
             font-family: var(--font-display);
             min-width: 0;
             padding: 0;
+            background: transparent;
         }
 
-            .stepper input:focus {
+            .create-tour-page .stepper input:focus {
                 outline: none;
             }
 
-        /* ¦¦ SIDEBAR PANEL ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+
         .sidebar-panel {
             position: sticky;
             top: 1.5rem;
         }
 
-        /* ¦¦ STATUS TOGGLE ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
-        .status-option {
+
+        .create-tour-page .status-option {
             display: flex;
             align-items: center;
-            gap: .85rem;
-            padding: .85rem 1rem;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 10px;
+            gap: .9rem;
+            padding: .9rem 1rem;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 12px;
             cursor: pointer;
-            transition: all .15s;
+            transition: all .2s;
             margin-bottom: .6rem;
+            background: rgba(24,24,32,.4);
         }
 
-            .status-option:last-child {
+            .create-tour-page .status-option:last-child {
                 margin-bottom: 0;
             }
 
-            .status-option:hover {
-                border-color: #cbd5e0;
-                background: #fafbfc;
+            .create-tour-page .status-option:hover {
+                border-color: rgba(255,255,255,.15);
+                background: rgba(255,255,255,.04);
             }
 
-            .status-option.selected-active {
-                border-color: #16a34a;
-                background: #f0fdf4;
+            .create-tour-page .status-option.selected-active {
+                border-color: rgba(34,197,94,.5);
+                background: rgba(34,197,94,.15);
             }
 
-            .status-option.selected-draft {
-                border-color: #d97706;
-                background: #fffbeb;
+            .create-tour-page .status-option.selected-draft {
+                border-color: rgba(251,191,36,.5);
+                background: rgba(251,191,36,.12);
             }
 
-            .status-option input[type="radio"] {
+            .create-tour-page .status-option input[type="radio"] {
                 display: none;
             }
 
@@ -462,61 +463,58 @@
             background: #a0aec0;
         }
 
-        .status-text .stitle {
-            font-size: .82rem;
+        .create-tour-page .status-text .stitle {
+            font-size: .85rem;
             font-weight: 600;
-            color: #2d3748;
+            color: #ffffff;
         }
 
-        .status-text .ssub {
-            font-size: .72rem;
-            color: #a0aec0;
+        .create-tour-page .status-text .ssub {
+            font-size: .73rem;
+            color: var(--text-muted);
         }
 
-        /* ¦¦ FORM ACTIONS ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+
         .form-actions {
             display: flex;
             gap: .75rem;
             flex-direction: column;
         }
 
-        .btn-submit {
-            background: #2563eb;
+        .create-tour-page .btn-submit {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%) !important;
             color: #fff;
             border: none;
-            border-radius: 10px;
-            padding: .75rem 1.5rem;
+            border-radius: 12px;
+            padding: .8rem 1.5rem;
             font-family: var(--font-display);
             font-weight: 700;
             font-size: .9rem;
             cursor: pointer;
-            transition: all .15s;
+            transition: all .2s;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: .5rem;
             width: 100%;
+            box-shadow: 0 4px 16px rgba(56,189,248,.3);
         }
 
-            .btn-submit:hover {
-                background: #1d4ed8;
-                box-shadow: 0 4px 14px rgba(37,99,235,.35);
+            .create-tour-page .btn-submit:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 6px 20px rgba(56,189,248,.4) !important;
             }
 
-            .btn-submit:active {
-                transform: translateY(1px);
-            }
-
-        .btn-draft {
-            background: #fff;
-            color: #4a5568;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 10px;
-            padding: .65rem 1.5rem;
+        .create-tour-page .btn-draft {
+            background: rgba(255,255,255,.06);
+            color: #e2e8f0;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 12px;
+            padding: .7rem 1.5rem;
             font-size: .875rem;
             font-weight: 500;
             cursor: pointer;
-            transition: all .15s;
+            transition: all .2s;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -525,61 +523,60 @@
             text-decoration: none;
         }
 
-            .btn-draft:hover {
-                background: #f7fafc;
-                border-color: #cbd5e0;
-                color: #2d3748;
+            .create-tour-page .btn-draft:hover {
+                background: rgba(255,255,255,.1);
+                border-color: rgba(255,255,255,.18);
+                color: #fff;
             }
 
-        .btn-cancel {
+        .create-tour-page .btn-cancel {
             background: none;
-            color: #a0aec0;
+            color: var(--text-muted);
             border: none;
-            border-radius: 10px;
-            padding: .55rem;
+            padding: .6rem;
             font-size: .8rem;
             cursor: pointer;
             text-align: center;
             text-decoration: none;
             display: block;
-            transition: color .12s;
+            transition: color .15s;
         }
 
-            .btn-cancel:hover {
-                color: #4a5568;
+            .create-tour-page .btn-cancel:hover {
+                color: #94a3b8;
             }
 
-        /* ¦¦ SUMMARY BOX ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
-        .summary-box {
-            background: #f8fafc;
-            border-radius: 10px;
+        .create-tour-page .summary-box {
+            background: rgba(24,24,32,.5);
+            border: 1px solid rgba(255,255,255,.06);
+            border-radius: 12px;
             padding: 1rem;
-            font-size: .8rem;
+            font-size: .82rem;
         }
 
-        .summary-row {
+        .create-tour-page .summary-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: .4rem 0;
-            border-bottom: 1px solid #edf2f7;
-            color: #4a5568;
+            padding: .45rem 0;
+            border-bottom: 1px solid rgba(255,255,255,.06);
+            color: #e2e8f0;
         }
 
-            .summary-row:last-child {
+            .create-tour-page .summary-row:last-child {
                 border-bottom: none;
             }
 
-            .summary-row .label {
-                color: #a0aec0;
+            .create-tour-page .summary-row .label {
+                color: var(--text-muted);
             }
 
-            .summary-row .value {
+            .create-tour-page .summary-row .value {
                 font-weight: 600;
-                color: #2d3748;
+                color: #ffffff;
             }
 
-        /* ¦¦ VALIDATION ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
+
         .text-danger-field {
             font-size: .73rem;
             color: #e53e3e;
@@ -589,7 +586,6 @@
             gap: .3rem;
         }
 
-        /* ¦¦ RESPONSIVE ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦ */
         @@media (max-width: 1199px) {
             .form-grid {
                 grid-template-columns: 1fr 300px;
@@ -605,400 +601,574 @@
                 position: static;
             }
         }
+
+        .create-tour-page .page-title {
+            color: #ffffff !important;
+        }
+
+        .create-tour-page .breadcrumb-item a {
+            color: var(--accent-strong) !important;
+        }
+
+        .create-tour-page .breadcrumb-item.active {
+            color: var(--text-muted) !important;
+        }
+
+        .create-tour-page .field-label {
+            color: #e2e8f0 !important;
+        }
+
+            .create-tour-page .field-label .required {
+                color: #f87171 !important;
+            }
+
+        .create-tour-page .field-hint {
+            color: var(--text-muted) !important;
+        }
+
+        .create-tour-page .form-control,
+        .create-tour-page .form-select {
+            border-color: rgba(255,255,255,.1) !important;
+            background: rgba(24,24,32,.7) !important;
+            color: #ffffff !important;
+        }
+
+            .create-tour-page .form-control:focus,
+            .create-tour-page .form-select:focus {
+                border-color: var(--accent-strong) !important;
+                box-shadow: 0 0 0 1px rgba(56,189,248,.3) !important;
+            }
+
+        .create-tour-page .input-with-icon .input-icon {
+            color: var(--text-muted) !important;
+        }
+
+        .create-tour-page .char-counter {
+            color: var(--text-muted) !important;
+        }
+
+            .create-tour-page .char-counter.warn {
+                color: #fbbf24 !important;
+            }
+
+            .create-tour-page .char-counter.danger {
+                color: #f87171 !important;
+            }
+
+        .create-tour-page .duration-unit label {
+            color: var(--text-muted) !important;
+        }
+
+        .create-tour-page .stepper {
+            border-color: rgba(255,255,255,.1) !important;
+        }
+
+        .create-tour-page .stepper-btn {
+            background: rgba(255,255,255,.05) !important;
+            color: #94a3b8 !important;
+        }
+
+            .create-tour-page .stepper-btn:hover {
+                background: rgba(56,189,248,.15) !important;
+                color: #38bdf8 !important;
+            }
+
+        .create-tour-page .stepper input {
+            color: #ffffff !important;
+            background: transparent !important;
+        }
+
+        .create-tour-page .status-option {
+            border-color: rgba(255,255,255,.1) !important;
+            background: rgba(24,24,32,.4) !important;
+        }
+
+            .create-tour-page .status-option:hover {
+                border-color: rgba(255,255,255,.15) !important;
+                background: rgba(255,255,255,.04) !important;
+            }
+
+            .create-tour-page .status-option.selected-active {
+                border-color: rgba(34,197,94,.5) !important;
+                background: rgba(34,197,94,.15) !important;
+            }
+
+            .create-tour-page .status-option.selected-draft {
+                border-color: rgba(251,191,36,.5) !important;
+                background: rgba(251,191,36,.12) !important;
+            }
+
+        .create-tour-page .status-text .stitle {
+            color: #ffffff !important;
+        }
+
+        .create-tour-page .status-text .ssub {
+            color: var(--text-muted) !important;
+        }
+
+        .create-tour-page .btn-submit {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%) !important;
+            box-shadow: 0 4px 16px rgba(56,189,248,.3);
+        }
+
+            .create-tour-page .btn-submit:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 6px 20px rgba(56,189,248,.4) !important;
+            }
+
+        .create-tour-page .btn-draft {
+            background: rgba(255,255,255,.06) !important;
+            color: #e2e8f0 !important;
+            border-color: rgba(255,255,255,.12) !important;
+        }
+
+            .create-tour-page .btn-draft:hover {
+                background: rgba(255,255,255,.1) !important;
+                color: #fff !important;
+            }
+
+        .create-tour-page .btn-cancel {
+            color: var(--text-muted) !important;
+        }
+
+            .create-tour-page .btn-cancel:hover {
+                color: #94a3b8 !important;
+            }
+
+        .create-tour-page .summary-box {
+            background: rgba(24,24,32,.5) !important;
+            border: 1px solid rgba(255,255,255,.06) !important;
+        }
+
+        .create-tour-page .summary-row {
+            color: #e2e8f0 !important;
+            border-bottom-color: rgba(255,255,255,.06) !important;
+        }
+
+            .create-tour-page .summary-row .label {
+                color: var(--text-muted) !important;
+            }
+
+            .create-tour-page .summary-row .value {
+                color: #ffffff !important;
+            }
+
+        .create-tour-page .text-danger-field {
+            color: #f87171 !important;
+        }
+
+        .create-tour-page .d-flex.gap-3 div[style*="background"] {
+            background: rgba(255,255,255,.08) !important;
+        }
+
+        .create-tour-page .d-flex.gap-3 span {
+            color: var(--text-muted) !important;
+        }
+
+        .create-tour-page ul[style*="list-style"] li {
+            color: var(--text-muted) !important;
+        }
+
+            .create-tour-page ul[style*="list-style"] li strong {
+                color: #94a3b8 !important;
+            }
     </style>
 }
 
 <!-- PAGE HEADER -->
-<div class="page-header">
-    <div>
-        <h1 class="page-title">Yeni Tur Ekle</h1>
-        <nav aria-label="breadcrumb" class="mt-2">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                <li class="breadcrumb-item"><a asp-action="Index">Turlar</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Yeni Tur</li>
-            </ol>
-        </nav>
-    </div>
-    <a asp-action="Index" class="btn btn-outline-secondary d-flex align-items-center gap-2" style="border-radius:10px;font-size:.875rem;font-weight:500;padding:.55rem 1.1rem;">
-        <i class="bi bi-arrow-left"></i> Tur Listesine Dön
-    </a>
-</div>
-
-<form method="post" id="createTourForm" novalidate>
-    @Html.AntiForgeryToken()
-
-    <div class="form-grid">
-
-        <!-- =======================================
-             LEFT COLUMN — ANA FORM
-        ======================================== -->
-        <div class="form-main">
-
-            <!-- TEMEL BÝLGÝLER -->
-            <div class="form-section">
-                <div class="section-header">
-                    <div class="section-icon blue"><i class="bi bi-info-circle"></i></div>
-                    <div>
-                        <div class="section-title">Temel Bilgiler</div>
-                        <div class="section-subtitle">Turun baþlýðý ve açýklamasý</div>
-                    </div>
-                </div>
-                <div class="section-body">
-                    <!-- Tur Baþlýðý -->
-                    <div class="field-group">
-                        <label asp-for="Title" class="field-label">
-                            <i class="bi bi-tag" style="color:#a0aec0;font-size:.85rem;"></i>
-                            Tur Baþlýðý <span class="required">*</span>
-                        </label>
-                        <input asp-for="Title" class="form-control" placeholder="Örn: Kapadokya Balon Turu - 3 Gece 4 Gün" maxlength="120" id="tourTitleInput" />
-                        <div class="char-counter" id="titleCounter">0 / 120</div>
-                        <span asp-validation-for="Title" class="text-danger-field"><i class="bi bi-exclamation-circle"></i><span></span></span>
-                    </div>
-
-                    <!-- Açýklama -->
-                    <div class="field-group">
-                        <label asp-for="Description" class="field-label">
-                            <i class="bi bi-text-left" style="color:#a0aec0;font-size:.85rem;"></i>
-                            Açýklama <span class="required">*</span>
-                        </label>
-                        <textarea asp-for="Description" class="form-control" placeholder="Tur hakkýnda detaylý açýklama yazýn..." maxlength="1000" id="descInput" rows="5"></textarea>
-                        <div class="char-counter" id="descCounter">0 / 1000</div>
-                        <span asp-validation-for="Description" class="text-danger-field"><i class="bi bi-exclamation-circle"></i><span></span></span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- KONUM BÝLGÝLERÝ -->
-            <div class="form-section">
-                <div class="section-header">
-                    <div class="section-icon green"><i class="bi bi-geo-alt"></i></div>
-                    <div>
-                        <div class="section-title">Konum Bilgileri</div>
-                        <div class="section-subtitle">Turun gideceði ülke ve þehir</div>
-                    </div>
-                </div>
-                <div class="section-body">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <div class="field-group">
-                                <label asp-for="Country" class="field-label">
-                                    <i class="bi bi-globe2" style="color:#a0aec0;font-size:.85rem;"></i>
-                                    Ülke <span class="required">*</span>
-                                </label>
-                                <div class="input-with-icon">
-                                    <i class="bi bi-globe2 input-icon"></i>
-                                    <select asp-for="Country" class="form-select" style="padding-left:2.4rem;" id="countrySelect">
-                                        <option value="">— Ülke seçin —</option>
-                                        <option value="Türkiye">???? Türkiye</option>
-                                        <option value="Ýtalya">???? Ýtalya</option>
-                                        <option value="Fransa">???? Fransa</option>
-                                        <option value="Ýspanya">???? Ýspanya</option>
-                                        <option value="Yunanistan">???? Yunanistan</option>
-                                        <option value="Japonya">???? Japonya</option>
-                                        <option value="Maldivler">???? Maldivler</option>
-                                        <option value="Tayland">???? Tayland</option>
-                                        <option value="Bali">???? Bali</option>
-                                        <option value="Mýsýr">???? Mýsýr</option>
-                                        <option value="Portekiz">???? Portekiz</option>
-                                        <option value="Hýrvatistan">???? Hýrvatistan</option>
-                                        <option value="Diðer">?? Diðer</option>
-                                    </select>
-                                </div>
-                                <span asp-validation-for="Country" class="text-danger-field"><i class="bi bi-exclamation-circle"></i><span></span></span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="field-group">
-                                <label asp-for="City" class="field-label">
-                                    <i class="bi bi-building" style="color:#a0aec0;font-size:.85rem;"></i>
-                                    Þehir <span class="required">*</span>
-                                </label>
-                                <div class="input-with-icon">
-                                    <i class="bi bi-geo-alt input-icon"></i>
-                                    <input asp-for="City" class="form-control" placeholder="Örn: Nevþehir, Kapadokya" id="cityInput" />
-                                </div>
-                                <span asp-validation-for="City" class="text-danger-field"><i class="bi bi-exclamation-circle"></i><span></span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TUR DETAYLARI -->
-            <div class="form-section">
-                <div class="section-header">
-                    <div class="section-icon amber"><i class="bi bi-calendar3"></i></div>
-                    <div>
-                        <div class="section-title">Tur Detaylarý</div>
-                        <div class="section-subtitle">Tarih, süre ve kapasite bilgileri</div>
-                    </div>
-                </div>
-                <div class="section-body">
-                    <div class="row g-3">
-                        <!-- Tur Tarihi -->
-                        <div class="col-md-6">
-                            <div class="field-group">
-                                <label asp-for="TourDate" class="field-label">
-                                    <i class="bi bi-calendar-event" style="color:#a0aec0;font-size:.85rem;"></i>
-                                    Tur Tarihi <span class="required">*</span>
-                                </label>
-                                <div class="input-with-icon">
-                                    <i class="bi bi-calendar3 input-icon"></i>
-                                    <input asp-for="TourDate" type="date" class="form-control" id="tourDateInput"
-                                           min="@DateTime.Now.ToString("yyyy-MM-dd")" />
-                                </div>
-                                <div class="field-hint"><i class="bi bi-info-circle me-1"></i>Bugünden önceki tarih seçilemez.</div>
-                                <span asp-validation-for="TourDate" class="text-danger-field"><i class="bi bi-exclamation-circle"></i><span></span></span>
-                            </div>
-                        </div>
-
-                        <!-- Kapasite -->
-                        <div class="col-md-6">
-                            <div class="field-group">
-                                <label asp-for="Capacity" class="field-label">
-                                    <i class="bi bi-people" style="color:#a0aec0;font-size:.85rem;"></i>
-                                    Kapasite <span class="required">*</span>
-                                </label>
-                                <div class="stepper">
-                                    <button type="button" class="stepper-btn" onclick="stepperDecrement()" aria-label="Azalt">
-                                        <i class="bi bi-dash"></i>
-                                    </button>
-                                    <input asp-for="Capacity" type="number" min="1" max="500" id="capacityInput" value="20" />
-                                    <button type="button" class="stepper-btn" onclick="stepperIncrement()" aria-label="Artýr">
-                                        <i class="bi bi-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="field-hint"><i class="bi bi-info-circle me-1"></i>Maksimum katýlýmcý sayýsý (1–500)</div>
-                                <span asp-validation-for="Capacity" class="text-danger-field"><i class="bi bi-exclamation-circle"></i><span></span></span>
-                            </div>
-                        </div>
-
-                        <!-- Süre (DayNight) -->
-                        <div class="col-12">
-                            <div class="field-group">
-                                <label class="field-label">
-                                    <i class="bi bi-clock" style="color:#a0aec0;font-size:.85rem;"></i>
-                                    Tur Süresi <span class="required">*</span>
-                                </label>
-                                <div class="duration-builder">
-                                    <div class="duration-unit">
-                                        <label for="dayCount">Gün Sayýsý</label>
-                                        <div class="input-with-icon">
-                                            <i class="bi bi-sun input-icon"></i>
-                                            <input type="number" id="dayCount" min="1" max="30" value="3" class="form-control" placeholder="3" />
-                                        </div>
-                                    </div>
-                                    <div class="duration-unit">
-                                        <label for="nightCount">Gece Sayýsý</label>
-                                        <div class="input-with-icon">
-                                            <i class="bi bi-moon input-icon"></i>
-                                            <input type="number" id="nightCount" min="0" max="30" value="2" class="form-control" placeholder="2" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <input asp-for="DayNight" type="hidden" id="dayNightHidden" />
-                                <div class="field-hint" id="durationPreview">
-                                    <i class="bi bi-clock me-1"></i>Önizleme: <strong id="durationText">3 Gün / 2 Gece</strong>
-                                </div>
-                                <span asp-validation-for="DayNight" class="text-danger-field"><i class="bi bi-exclamation-circle"></i><span></span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- GÖRSEL -->
-            <div class="form-section">
-                <div class="section-header">
-                    <div class="section-icon purple"><i class="bi bi-image"></i></div>
-                    <div>
-                        <div class="section-title">Tur Görseli</div>
-                        <div class="section-subtitle">URL girin veya dosya yükleyin</div>
-                    </div>
-                </div>
-                <div class="section-body">
-                    <!-- URL ile -->
-                    <div class="field-group">
-                        <label asp-for="ImageUrl" class="field-label">
-                            <i class="bi bi-link-45deg" style="color:#a0aec0;font-size:.85rem;"></i>
-                            Görsel URL
-                        </label>
-                        <div class="input-with-icon">
-                            <i class="bi bi-link-45deg input-icon"></i>
-                            <input asp-for="ImageUrl" type="url" class="form-control" placeholder="https://ornek.com/gorsel.jpg" id="imageUrlInput" />
-                        </div>
-                        <div class="field-hint"><i class="bi bi-info-circle me-1"></i>JPEG, PNG, WebP desteklenir.</div>
-                        <img src="" alt="Görsel önizleme" class="url-preview-thumb" id="urlPreviewImg" />
-                        <span asp-validation-for="ImageUrl" class="text-danger-field"><i class="bi bi-exclamation-circle"></i><span></span></span>
-                    </div>
-
-                    <!-- Ayýrýcý -->
-                    <div class="d-flex align-items-center gap-3 my-3">
-                        <div style="flex:1;height:1px;background:#e2e8f0;"></div>
-                        <span style="font-size:.73rem;color:#a0aec0;font-weight:600;text-transform:uppercase;letter-spacing:.06em;">veya</span>
-                        <div style="flex:1;height:1px;background:#e2e8f0;"></div>
-                    </div>
-
-                    <!-- Dosya yükleme -->
-                    <div class="image-upload-zone" id="uploadZone">
-                        <input type="file" accept="image/*" id="imageFileInput" aria-label="Görsel dosyasý seç" />
-                        <div class="upload-icon"><i class="bi bi-cloud-arrow-up"></i></div>
-                        <div class="upload-title">Dosya sürükleyin veya seçin</div>
-                        <div class="upload-sub">PNG, JPG, WebP — Maks. 5MB</div>
-                    </div>
-
-                    <div class="image-preview-box mt-3" id="previewBox">
-                        <img src="" alt="Yüklenen görsel önizleme" id="previewImg" />
-                        <div class="preview-overlay">
-                            <button type="button" class="preview-remove" onclick="removeImage()">
-                                <i class="bi bi-trash3"></i> Görseli Kaldýr
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+<div class="create-tour-page">
+    <div class="page-header">
+        <div>
+            <h1 class="page-title">Yeni Tur Ekle</h1>
+            <nav aria-label="breadcrumb" class="mt-2">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                    <li class="breadcrumb-item"><a asp-action="TourList">Turlar</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Yeni Tur</li>
+                </ol>
+            </nav>
         </div>
+        <a asp-action="TourList" class="btn btn-outline-secondary d-flex align-items-center gap-2" style="border-radius:10px;font-size:.875rem;font-weight:500;padding:.55rem 1.1rem;">
+            <i class="bi bi-arrow-left"></i> Tur Listesine Dön
+        </a>
+    </div>
 
-        <!-- =======================================
-             RIGHT COLUMN — SIDEBAR PANEL
-        ======================================== -->
-        <div class="sidebar-panel">
+    <form method="post" id="createTourForm" novalidate>
 
-            <!-- YAYIM DURUMU -->
-            <div class="form-section">
-                <div class="section-header">
-                    <div class="section-icon green"><i class="bi bi-send-check"></i></div>
-                    <div>
-                        <div class="section-title">Yayým Durumu</div>
-                        <div class="section-subtitle">Tur hangi durumda yayýmlansýn?</div>
+
+        <div class="form-grid">
+
+
+            <div class="form-main">
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon blue"><i class="bi bi-info-circle"></i></div>
+                        <div>
+                            <div class="section-title">Temel Bilgiler</div>
+                            <div class="section-subtitle">Tur baþlýðý ve kýsa açýklama</div>
+                        </div>
+                    </div>
+                    <div class="section-body">
+
+                        <div class="field-group">
+                            <label asp-for="Title" class="field-label">
+                                <i class="bi bi-tag" style="color:#a0aec0;font-size:.85rem;"></i>
+                                Tur Baþlýðý <span class="required">*</span>
+                            </label>
+                            <input asp-for="Title" class="form-control" placeholder="örn: Kapadokya Balon Turu - 3 Gece 4 Gün" maxlength="120" id="tourTitleInput" />
+                            <div class="char-counter" id="titleCounter">0 / 120</div>
+                        </div>
+
+
+                        <div class="field-group">
+                            <label asp-for="Description" class="field-label">
+                                <i class="bi bi-text-left" style="color:#a0aec0;font-size:.85rem;"></i>
+                                Açýklama <span class="required">*</span>
+                            </label>
+                            <textarea asp-for="Description" class="form-control" placeholder="Tur hakkýnda kýsa bir açýklama yazýn..." maxlength="1000" id="descInput" rows="5"></textarea>
+                            <div class="char-counter" id="descCounter">0 / 1000</div>
+                        </div>
                     </div>
                 </div>
-                <div class="section-body">
-                    <label class="status-option selected-active" id="statusActive">
-                        <input type="radio" name="PublishStatus" value="active" checked onchange="updateStatus(this)" />
-                        <span class="status-dot dot-active"></span>
-                        <div class="status-text">
-                            <div class="stitle">Aktif</div>
-                            <div class="ssub">Hemen yayýmla</div>
-                        </div>
-                        <i class="bi bi-check-circle-fill ms-auto" style="color:#16a34a;font-size:.95rem;"></i>
-                    </label>
 
-                    <label class="status-option" id="statusDraft">
-                        <input type="radio" name="PublishStatus" value="draft" onchange="updateStatus(this)" />
-                        <span class="status-dot dot-draft"></span>
-                        <div class="status-text">
-                            <div class="stitle">Taslak</div>
-                            <div class="ssub">Þimdilik gizle</div>
-                        </div>
-                    </label>
 
-                    <label class="status-option" id="statusPassive">
-                        <input type="radio" name="PublishStatus" value="passive" onchange="updateStatus(this)" />
-                        <span class="status-dot dot-passive"></span>
-                        <div class="status-text">
-                            <div class="stitle">Pasif</div>
-                            <div class="ssub">Yayýmdan kaldýr</div>
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon green"><i class="bi bi-geo-alt"></i></div>
+                        <div>
+                            <div class="section-title">Konum Bilgileri</div>
+                            <div class="section-subtitle">Turun gideceði ülke ve þehir</div>
                         </div>
-                    </label>
+                    </div>
+                    <div class="section-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="field-group">
+                                    <label asp-for="Country" class="field-label">
+                                        <i class="bi bi-globe2" style="color:#a0aec0;font-size:.85rem;"></i>
+                                        Ülke <span class="required">*</span>
+                                    </label>
+                                    <div class="input-with-icon">
+                                        <i class="bi bi-globe2 input-icon"></i>
+                                        <select asp-for="Country" class="form-select" style="padding-left:2.4rem;" id="countrySelect">
+                                            <option value="">Ülke seçin</option>
+                                            <option value="Türkiye">Türkiye</option>
+                                            <option value="Ýtalya">Ýtalya</option>
+                                            <option value="Fransa">Fransa</option>
+                                            <option value="Ýspanya">Ýspanya</option>
+                                            <option value="Yunanistan">Yunanistan</option>
+                                            <option value="Japonya">Japonya</option>
+                                            <option value="Maldivler">Maldivler</option>
+                                            <option value="Tayland">Tayland</option>
+                                            <option value="Bali">Bali</option>
+                                            <option value="Mýsýr">Mýsýr</option>
+                                            <option value="Portekiz">Portekiz</option>
+                                            <option value="Hýrvatistan">Hýrvatistan</option>
+                                            <option value="Diðer">Diðer</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="field-group">
+                                    <label asp-for="City" class="field-label">
+                                        <i class="bi bi-building" style="color:#a0aec0;font-size:.85rem;"></i>
+                                        Þehir <span class="required">*</span>
+                                    </label>
+                                    <div class="input-with-icon">
+                                        <i class="bi bi-geo-alt input-icon"></i>
+                                        <input asp-for="City" class="form-control" placeholder="örn: Nevþehir, Kapadokya" id="cityInput" />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- TUR DETAYLARI -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon amber"><i class="bi bi-calendar3"></i></div>
+                        <div>
+                            <div class="section-title">Tur Detaylarý</div>
+                            <div class="section-subtitle">Tarih, süre ve kapasite bilgileri</div>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="row g-3">
+                            <!-- Tur Tarihi -->
+                            <div class="col-md-6">
+                                <div class="field-group">
+                                    <label asp-for="TourDate" class="field-label">
+                                        <i class="bi bi-calendar-event" style="color:#a0aec0;font-size:.85rem;"></i>
+                                        Tur Tarihi <span class="required">*</span>
+                                    </label>
+                                    <div class="input-with-icon">
+                                        <i class="bi bi-calendar3 input-icon"></i>
+                                        <input asp-for="TourDate" type="date" class="form-control" id="tourDateInput"
+                                               min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                                    </div>
+                                    <div class="field-hint"><i class="bi bi-info-circle me-1"></i>Bugünden önceki tarih seçilemez.</div>
+                                    <span asp-validation-for="TourDate" class="text-danger-field"></span>
+                                </div>
+                            </div>
+
+                            <!-- Kapasite -->
+                            <div class="col-md-6">
+                                <div class="field-group">
+                                    <label asp-for="Capacity" class="field-label">
+                                        <i class="bi bi-people" style="color:#a0aec0;font-size:.85rem;"></i>
+                                        Kapasite <span class="required">*</span>
+                                    </label>
+                                    <div class="stepper">
+                                        <button type="button" class="stepper-btn" onclick="stepperDecrement()" aria-label="Azalt">
+                                            <i class="bi bi-dash"></i>
+                                        </button>
+                                        <input asp-for="Capacity" type="number" min="1" max="500" id="capacityInput" value="20" />
+                                        <button type="button" class="stepper-btn" onclick="stepperIncrement()" aria-label="Artýr">
+                                            <i class="bi bi-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="field-hint"><i class="bi bi-info-circle me-1"></i>Maksimum katýlýmcý sayýsý (1-500)</div>
+                                    <span asp-validation-for="Capacity" class="text-danger-field"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="col-12">
+                                <div class="field-group">
+                                    <label class="field-label">
+                                        <i class="bi bi-clock" style="color:#a0aec0;font-size:.85rem;"></i>
+                                        Tur Süresi <span class="required">*</span>
+                                    </label>
+                                    <div class="duration-builder">
+                                        <div class="duration-unit">
+                                            <label for="dayCount">Gün Sayýsý</label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-sun input-icon"></i>
+                                                <input type="number" id="dayCount" min="1" max="30" value="3" class="form-control" placeholder="3" />
+                                            </div>
+                                        </div>
+                                        <div class="duration-unit">
+                                            <label for="nightCount">Gece Sayýsý</label>
+                                            <div class="input-with-icon">
+                                                <i class="bi bi-moon input-icon"></i>
+                                                <input type="number" id="nightCount" min="0" max="30" value="2" class="form-control" placeholder="2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input asp-for="DayNight" type="hidden" id="dayNightHidden" />
+                                    <div class="field-hint" id="durationPreview">
+                                        <i class="bi bi-clock me-1"></i>Önizleme: <strong id="durationText">3 Gün / 2 Gece</strong>
+                                    </div>
+                                    <span asp-validation-for="DayNight" class="text-danger-field"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon purple"><i class="bi bi-image"></i></div>
+                        <div>
+                            <div class="section-title">Tur Görseli</div>
+                            <div class="section-subtitle">URL girin veya dosya yükleyin</div>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <!-- URL ile -->
+                        <div class="field-group">
+                            <label asp-for="ImageUrl" class="field-label">
+                                <i class="bi bi-link-45deg" style="color:#a0aec0;font-size:.85rem;"></i>
+                                Görsel URL
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-link-45deg input-icon"></i>
+                                <input asp-for="ImageUrl" type="url" class="form-control" placeholder="https://ornek.com/gorsel.jpg" id="imageUrlInput" />
+                            </div>
+                            <div class="field-hint"><i class="bi bi-info-circle me-1"></i>JPEG, PNG, WebP desteklenir.</div>
+                            <img src="" alt="Görsel önizleme" class="url-preview-thumb" id="urlPreviewImg" />
+                            <span asp-validation-for="ImageUrl" class="text-danger-field"></span>
+                        </div>
+                        <div class="field-group mt-3">
+                            <label asp-for="MapImageUrl" class="field-label">
+                                <i class="bi bi-map" style="color:#a0aec0;font-size:.85rem;"></i>
+                                Harita Görsel URL
+                            </label>
+                            <div class="input-with-icon">
+                                <i class="bi bi-link-45deg input-icon"></i>
+                                <input asp-for="MapImageUrl" type="url" class="form-control" placeholder="https://ornek.com/harita.jpg" />
+                            </div>
+                            <div class="field-hint"><i class="bi bi-info-circle me-1"></i>Tur detay sayfas?nda harita bölümünde gösterilir. Bo? b?rak?l?rsa varsay?lan Google Maps gösterilir.</div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-3 my-3">
+                            <div style="flex:1;height:1px;background:#e2e8f0;"></div>
+                            <span style="font-size:.73rem;color:#a0aec0;font-weight:600;text-transform:uppercase;letter-spacing:.06em;">veya</span>
+                            <div style="flex:1;height:1px;background:#e2e8f0;"></div>
+                        </div>
+
+
+                        <div class="image-upload-zone" id="uploadZone">
+                            <input type="file" accept="image/*" id="imageFileInput" aria-label="Görsel dosyasý seçin" />
+                            <div class="upload-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+                            <div class="upload-title">Dosya sürükleyin veya seçin</div>
+                            <div class="upload-sub">PNG, JPG, WebP Maks. 5MB</div>
+                        </div>
+
+                        <div class="image-preview-box mt-3" id="previewBox">
+                            <img src="" alt="Yüklenen görsel önizleme" id="previewImg" />
+                            <div class="preview-overlay">
+                                <button type="button" class="preview-remove" onclick="removeImage()">
+                                    <i class="bi bi-trash3"></i> Görseli Kaldýr
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- ÖN ÝZLEME ÖZETÝ -->
-            <div class="form-section">
-                <div class="section-header">
-                    <div class="section-icon blue"><i class="bi bi-eye"></i></div>
-                    <div>
-                        <div class="section-title">Tur Özeti</div>
-                        <div class="section-subtitle">Canlý önizleme</div>
-                    </div>
-                </div>
-                <div class="section-body">
-                    <div class="summary-box">
-                        <div class="summary-row">
-                            <span class="label">Baþlýk</span>
-                            <span class="value" id="sumTitle" style="max-width:150px;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">—</span>
-                        </div>
-                        <div class="summary-row">
-                            <span class="label">Ülke / Þehir</span>
-                            <span class="value" id="sumLocation">—</span>
-                        </div>
-                        <div class="summary-row">
-                            <span class="label">Tarih</span>
-                            <span class="value" id="sumDate">—</span>
-                        </div>
-                        <div class="summary-row">
-                            <span class="label">Süre</span>
-                            <span class="value" id="sumDuration">—</span>
-                        </div>
-                        <div class="summary-row">
-                            <span class="label">Kapasite</span>
-                            <span class="value" id="sumCapacity">—</span>
+
+            <div class="sidebar-panel">
+
+                <!-- YAYIM DURUMU -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon green"><i class="bi bi-send-check"></i></div>
+                        <div>
+                            <div class="section-title">Yayým Durumu</div>
+                            <div class="section-subtitle">Tur hangi durumda yayýmlansýn ?</div>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <div class="section-body">
+                        <label class="status-option selected-active" id="statusActive">
+                            <input type="radio" name="PublishStatus" value="active" checked onchange="updateStatus(this)" />
+                            <span class="status-dot dot-active"></span>
+                            <div class="status-text">
+                                <div class="stitle">Aktif</div>
+                                <div class="ssub">Hemen yayýmla</div>
+                            </div>
+                            <i class="bi bi-check-circle-fill ms-auto" style="color:#16a34a;font-size:.95rem;"></i>
+                        </label>
 
-            <!-- FORMUN GÖNDERÝM BUTONLARI -->
-            <div class="form-section">
-                <div class="section-body">
-                    <div class="form-actions">
-                        <button type="submit" class="btn-submit" id="submitBtn">
-                            <i class="bi bi-plus-circle-fill"></i>
-                            Turu Kaydet
-                        </button>
-                        <button type="button" class="btn-draft" onclick="saveDraft()">
-                            <i class="bi bi-floppy"></i>
-                            Taslak Olarak Kaydet
-                        </button>
-                        <a asp-action="Index" class="btn-cancel">
-                            <i class="bi bi-x me-1"></i>Ýptal et, geri dön
-                        </a>
+                        <label class="status-option" id="statusDraft">
+                            <input type="radio" name="PublishStatus" value="draft" onchange="updateStatus(this)" />
+                            <span class="status-dot dot-draft"></span>
+                            <div class="status-text">
+                                <div class="stitle">Taslak</div>
+                                <div class="ssub">Þimdilik gizle</div>
+                            </div>
+                        </label>
+
+                        <label class="status-option" id="statusPassive">
+                            <input type="radio" name="PublishStatus" value="passive" onchange="updateStatus(this)" />
+                            <span class="status-dot dot-passive"></span>
+                            <div class="status-text">
+                                <div class="stitle">Pasif</div>
+                                <div class="ssub">Yayýmdan kaldýr</div>
+                            </div>
+                        </label>
                     </div>
                 </div>
-            </div>
 
-            <!-- KISA ÝPUÇLARI -->
-            <div class="form-section">
-                <div class="section-header" style="background:none;">
-                    <div class="section-icon amber"><i class="bi bi-lightbulb"></i></div>
-                    <div>
-                        <div class="section-title">Ýpuçlarý</div>
+
+                <div class="form-section">
+                    <div class="section-header">
+                        <div class="section-icon blue"><i class="bi bi-eye"></i></div>
+                        <div>
+                            <div class="section-title">Tur Özeti</div>
+                            <div class="section-subtitle">Canlý Önizleme</div>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <div class="summary-box">
+                            <div class="summary-row">
+                                <span class="label">Baþlýk</span>
+                                <span class="value" id="sumTitle" style="max-width:150px;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="label">Ülke / Þehir</span>
+                                <span class="value" id="sumLocation"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="label">Tarih</span>
+                                <span class="value" id="sumDate"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="label">Süre</span>
+                                <span class="value" id="sumDuration"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="label">Kapasite</span>
+                                <span class="value" id="sumCapacity"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="section-body" style="padding-top:.75rem;">
-                    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem;">
-                        <li style="font-size:.78rem;color:#718096;display:flex;gap:.5rem;align-items:flex-start;">
-                            <i class="bi bi-check2-circle" style="color:#16a34a;margin-top:1px;flex-shrink:0;"></i>
-                            Baþlýk <strong>60–80 karakter</strong> arasýnda olmalý.
-                        </li>
-                        <li style="font-size:.78rem;color:#718096;display:flex;gap:.5rem;align-items:flex-start;">
-                            <i class="bi bi-check2-circle" style="color:#16a34a;margin-top:1px;flex-shrink:0;"></i>
-                            Görselin en az <strong>1200×800px</strong> çözünürlükte olmasý önerilir.
-                        </li>
-                        <li style="font-size:.78rem;color:#718096;display:flex;gap:.5rem;align-items:flex-start;">
-                            <i class="bi bi-check2-circle" style="color:#16a34a;margin-top:1px;flex-shrink:0;"></i>
-                            Açýklama <strong>özellikler ve dahil/hariç</strong> bilgileri içermeli.
-                        </li>
-                        <li style="font-size:.78rem;color:#718096;display:flex;gap:.5rem;align-items:flex-start;">
-                            <i class="bi bi-check2-circle" style="color:#16a34a;margin-top:1px;flex-shrink:0;"></i>
-                            Kapasite doluluk oraný rezervasyon panelinden takip edilir.
-                        </li>
-                    </ul>
+
+
+                <div class="form-section">
+                    <div class="section-body">
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit" id="submitBtn">
+                                <i class="bi bi-plus-circle-fill"></i>
+                                Turu Kaydet
+                            </button>
+                            <button type="button" class="btn-draft" onclick="saveDraft()">
+                                <i class="bi bi-floppy"></i>
+                                Taslak Olarak Kaydet
+                            </button>
+                            <a asp-action="TourList" class="btn-cancel">
+                                <i class="bi bi-x me-1"></i>Ýptal et, geri dön
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-        </div><!-- /sidebar-panel -->
+                <div class="form-section">
+                    <div class="section-header" style="background:none;">
+                        <div class="section-icon amber"><i class="bi bi-lightbulb"></i></div>
+                        <div>
+                            <div class="section-title">Ýpuçlarý</div>
+                        </div>
+                    </div>
+                    <div class="section-body" style="padding-top:.75rem;">
+                        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem;">
+                            <li style="font-size:.78rem;color:#718096;display:flex;gap:.5rem;align-items:flex-start;">
+                                <i class="bi bi-check2-circle" style="color:#16a34a;margin-top:1px;flex-shrink:0;"></i>
+                                Baþlýk <strong>60-80 karakter</strong> arasýnda olmalý.
+                            </li>
+                            <li style="font-size:.78rem;color:#718096;display:flex;gap:.5rem;align-items:flex-start;">
+                                <i class="bi bi-check2-circle" style="color:#16a34a;margin-top:1px;flex-shrink:0;"></i>
+                                Görselin en az <strong>1200x800px</strong> Çözünürlükte olmasý önerilir.
+                            </li>
+                            <li style="font-size:.78rem;color:#718096;display:flex;gap:.5rem;align-items:flex-start;">
+                                <i class="bi bi-check2-circle" style="color:#16a34a;margin-top:1px;flex-shrink:0;"></i>
+                                Açýklama <strong>Özellikler </strong> bilgileri içermeli.
+                            </li>
+                            <li style="font-size:.78rem;color:#718096;display:flex;gap:.5rem;align-items:flex-start;">
+                                <i class="bi bi-check2-circle" style="color:#16a34a;margin-top:1px;flex-shrink:0;"></i>
+                                Kapasite doluluk oraný rezervasyon panelinden takip edilir.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-    </div><!-- /form-grid -->
-</form>
+            </div><!-- /sidebar-panel -->
 
+        </div><!-- /form-grid -->
+    </form>
+</div><!-- /create-tour-page -->
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     <script>
-        // ¦¦ CHAR COUNTERS ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         function initCounter(inputId, counterId, max) {
             const el = document.getElementById(inputId);
             const counter = document.getElementById(counterId);
@@ -1015,7 +1185,7 @@
         initCounter('tourTitleInput', 'titleCounter', 120);
         initCounter('descInput', 'descCounter', 1000);
 
-        // ¦¦ STEPPER ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         function stepperDecrement() {
             const inp = document.getElementById('capacityInput');
             const val = parseInt(inp.value) || 1;
@@ -1030,7 +1200,7 @@
 
         document.getElementById('capacityInput').addEventListener('input', updateSummary);
 
-        // ¦¦ DURATION BUILDER ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         function updateDuration() {
             const days   = parseInt(document.getElementById('dayCount').value)   || 0;
             const nights = parseInt(document.getElementById('nightCount').value) || 0;
@@ -1044,7 +1214,7 @@
         document.getElementById('nightCount').addEventListener('input', updateDuration);
         updateDuration();
 
-        // ¦¦ IMAGE URL PREVIEW ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         const imageUrlInput = document.getElementById('imageUrlInput');
         const urlPreviewImg = document.getElementById('urlPreviewImg');
         let urlDebounce;
@@ -1063,7 +1233,7 @@
             }, 600);
         });
 
-        // ¦¦ FILE UPLOAD PREVIEW ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         const uploadZone = document.getElementById('uploadZone');
         const imageFileInput = document.getElementById('imageFileInput');
         const previewBox = document.getElementById('previewBox');
@@ -1100,7 +1270,7 @@
             previewImg.src = '';
         }
 
-        // ¦¦ STATUS TOGGLE ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         function updateStatus(radio) {
             ['statusActive','statusDraft','statusPassive'].forEach(function(id) {
                 const el = document.getElementById(id);
@@ -1111,7 +1281,7 @@
             else if (radio.value === 'draft') parent.classList.add('selected-draft');
         }
 
-        // ¦¦ LIVE SUMMARY ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         function updateSummary() {
             const title    = document.getElementById('tourTitleInput').value.trim();
             const country  = document.getElementById('countrySelect').value;
@@ -1120,11 +1290,11 @@
             const duration = document.getElementById('dayNightHidden').value;
             const capacity = document.getElementById('capacityInput').value;
 
-            document.getElementById('sumTitle').textContent    = title    || '—';
-            document.getElementById('sumLocation').textContent = (country && city) ? country + ' / ' + city : (country || city || '—');
-            document.getElementById('sumDate').textContent     = date ? formatDate(date) : '—';
-            document.getElementById('sumDuration').textContent = duration  || '—';
-            document.getElementById('sumCapacity').textContent = capacity  ? capacity + ' kiþi' : '—';
+            document.getElementById('sumTitle').textContent    = title    || '?';
+            document.getElementById('sumLocation').textContent = (country && city) ? country + ' / ' + city : (country || city || '?');
+            document.getElementById('sumDate').textContent     = date ? formatDate(date) : '?';
+            document.getElementById('sumDuration').textContent = duration  || '?';
+            document.getElementById('sumCapacity').textContent = capacity  ? capacity + ' kiþi' : '?';
         }
 
         function formatDate(dateStr) {
@@ -1139,14 +1309,14 @@
 
         updateSummary();
 
-        // ¦¦ DRAFT SAVE ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         function saveDraft() {
             const radio = document.querySelector('input[name="PublishStatus"][value="draft"]');
             if (radio) { radio.checked = true; updateStatus(radio); }
             document.getElementById('createTourForm').submit();
         }
 
-        // ¦¦ SUBMIT FEEDBACK ¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
         document.getElementById('createTourForm').addEventListener('submit', function () {
             const btn = document.getElementById('submitBtn');
             btn.disabled = true;

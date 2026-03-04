@@ -1,0 +1,86 @@
+﻿@model List<ResultAboutDto>
+
+<section class="about-us pb-0">
+    <div class="section-shape section-shape1" style="background-image: url(/travelin/travelin/images/shape8.png)"></div>
+    <div class="container">
+        <div class="section-title mb-6 w-50 mx-auto text-center">
+            <h4 class="mb-1 theme1">Temel Özellikler</h4>
+            <h2 class="mb-1">Seyahatte <span class="theme">Mükemmel Deneyimi</span> Keşfedin</h2>
+            <p>
+                Tripify, kullanıcıların ihtiyaçlarına uygun turları kolayca bulabilmesi ve güvenle
+                seyahat planı oluşturabilmesi için geliştirilmiş modern bir tur platformudur.
+            </p>
+        </div>
+
+        <!-- why us starts -->
+        @foreach (var item in Model)
+        {
+            <div class="why-us">
+                <div class="why-us-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                            <div class="why-us-item p-5 pt-6 pb-6 border rounded bg-white">
+                                <div class="why-us-content">
+                                    <div class="why-us-icon mb-1">
+                                        <i class="@item.WhyUsIconUrl"></i>
+                                    </div>
+                                    <h4><a href="about.html">@item.WhyUsTitle</a></h4>
+                                    <p class="mb-2">
+                                        @item.WhyUsDescription
+                                    </p>
+                                    <p class="mb-0 theme">Kullanıcı Odaklı Seçenekler</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                            <div class="why-us-item p-5 pt-6 pb-6 border rounded bg-white">
+                                <div class="why-us-content">
+                                    <div class="why-us-icon mb-1">
+                                        <i class="@item.WhyUsIconUrl2"></i>
+                                    </div>
+                                    <h4><a href="about.html">@item.WhyUsTitle2</a></h4>
+                                    <p class="mb-2">
+                                        @item.WhyUsDescription2
+                                    </p>
+                                    <p class="mb-0 theme">Detaylı Tur Bilgileri</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                            <div class="why-us-item p-5 pt-6 pb-6 border rounded bg-white">
+                                <div class="why-us-content">
+                                    <div class="why-us-icon mb-1">
+                                        <i class="@item.WhyUsIconUrl3"></i>
+                                    </div>
+                                    <h4><a href="about.html">@item.WhyUsTitle3</a></h4>
+                                    <p class="mb-2">
+                                        @item.WhyUsDescription3
+                                    </p>
+                                    <p class="mb-0 theme">Gerçek Kullanıcı Deneyimleri</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                            <div class="why-us-item p-5 pt-6 pb-6 border rounded bg-white">
+                                <div class="why-us-content">
+                                    <div class="why-us-icon mb-1">
+                                        <i class="@item.WhyUsIconUrl4"></i>
+                                    </div>
+                                    <h4><a href="about.html">@item.WhyUsTitle4</a></h4>
+                                    <p class="mb-2">
+                                        @item.WhyUsDescription4
+                                    </p>
+                                    <p class="mb-0 theme">Güvenli Tur Yönetimi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <!-- why us ends -->
+    </div>
+</section>

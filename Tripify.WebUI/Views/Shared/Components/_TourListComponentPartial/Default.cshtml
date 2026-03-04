@@ -33,10 +33,11 @@
                         </div>
                         <div class="col-lg-5 col-md-6">
                             <div class="trend-content position-relative text-md-start text-center">
+
                                 <small>@item.DayNight</small>
-                                <h3 class="mb-1"><a href="tour-single.html">@item.Title</a></h3>
+                                <h3 class="mb-1"><a href="/Tour/TourDetail/@item.TourId">@item.Title</a></h3>
                                 <h6 class="theme mb-0"><i class="icon-location-pin"></i> @item.Country | @item.City</h6>
-                                <p class="mt-4 mb-0">@item.Description <br><a href="#"><span class="theme"> Ücretsiz Ýptal</span></a></p>
+                                <p class="mt-4 mb-0">@(item.Description?.Length > 150 ? item.Description.Substring(0, 150) + "..." : item.Description) <br><a href="#"><span class="theme">Ãœcretsiz Ä°ptal</span></a></p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-3">
@@ -48,12 +49,12 @@
                                     <span class="fa fa-star checked"></span>
                                     <span class="fa fa-star checked"></span>
                                 </div>
-                                <small>200 Görüntüleme</small>
+                                <small>200 GÃ¶rÃ¼ntÃ¼leme</small>
                                 <div class="trend-price my-2">
-                                    <span class="mb-0">Baþlayan Fiyatlarla</span>
-                                    <h3 class="mb-0">@item.Price ?</h3>
+                                    <span class="mb-0">BaÅŸlayan Fiyatlarla</span>
+                                    <h3 class="mb-0">@item.Price TL</h3>
                                 </div>
-                                <a href="tour-single.html" class="nir-btn">Tur Detayý</a>
+                                <a href="/Tour/TourDetail/@item.TourId" class="nir-btn">Tur DetayÄ±</a>
                             </div>
                         </div>
                     </div>
@@ -64,7 +65,7 @@
                 @if (ViewBag.CurrentPage > 1)
                 {
                     <a href="?page=@(ViewBag.CurrentPage - 1)" class="nir-btn me-2">
-                        <i class="fa fa-long-arrow-alt-left"></i> Önceki
+                        <i class="fa fa-long-arrow-alt-left"></i> Ã–nceki
                     </a>
                 }
 

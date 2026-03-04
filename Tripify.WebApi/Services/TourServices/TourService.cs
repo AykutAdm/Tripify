@@ -36,6 +36,12 @@ namespace Tripify.WebAPI.Services.TourServices
             return _mapper.Map<List<ResultTourDto>>(values);
         }
 
+        public async Task<List<ResultLast4TourDto>> GetLast4TourAsync()
+        {
+            var values = await _tourCollection.Find(x => true).SortByDescending(y => y.TourDate).Limit(4).ToListAsync();
+            return _mapper.Map<List<ResultLast4TourDto>>(values);
+        }
+
         public async Task<GetTourByIdDto> GetTourByIdAsync(string id)
         {
             var value = await _tourCollection.Find(x => x.TourId == id).FirstOrDefaultAsync();

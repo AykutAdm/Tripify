@@ -24,7 +24,7 @@
             font-family: var(--font-display);
             font-size: 1.6rem;
             font-weight: 800;
-            color: #1a202c;
+            color: var(--text-primary);
             letter-spacing: -.03em;
             line-height: 1;
         }
@@ -49,8 +49,8 @@
             }
 
         .filter-card {
-            background: #fff;
-            border: 1px solid #e2e8f0;
+            background: #020617;
+            border: 1px solid #1f2937;
             border-radius: 12px;
             padding: 1.25rem 1.5rem;
             margin-bottom: 1.5rem;
@@ -58,8 +58,8 @@
         }
 
         .table-card {
-            background: #fff;
-            border: 1px solid #e2e8f0;
+            background: #020617;
+            border: 1px solid #1f2937;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 2px 12px rgba(0,0,0,.06);
@@ -79,15 +79,15 @@
                 font-family: var(--font-display);
                 font-weight: 700;
                 font-size: .95rem;
-                color: #1a202c;
+                color: var(--text-primary);
                 display: flex;
                 align-items: center;
                 gap: .5rem;
             }
 
         .tour-count {
-            background: #eff6ff;
-            color: #2563eb;
+            background: var(--accent-soft);
+            color: var(--accent-strong);
             font-size: .72rem;
             font-weight: 600;
             padding: .2rem .6rem;
@@ -101,7 +101,7 @@
         }
 
             .tours-table thead th {
-                background: #f8fafc;
+                background: #020617;
                 font-size: .72rem;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -122,14 +122,14 @@
                 }
 
                 .tours-table tbody tr:hover {
-                    background: #f8fafc;
+                    background: rgba(15,23,42,.85);
                 }
 
             .tours-table tbody td {
                 padding: .85rem 1rem;
                 vertical-align: middle;
                 font-size: .875rem;
-                color: #2d3748;
+                color: var(--text-primary);
             }
 
         /* THUMBNAIL */
@@ -138,7 +138,7 @@
             height: 76px;
             object-fit: cover;
             border-radius: 10px;
-            border: 2px solid #e2e8f0;
+            border: 2px solid #1f2937;
             display: block;
         }
 
@@ -146,18 +146,18 @@
             width: 76px;
             height: 76px;
             border-radius: 10px;
-            background: linear-gradient(135deg, #e2e8f0, #cbd5e0);
+            background: radial-gradient(circle at top, #1f2937, #020617);
             display: grid;
             place-items: center;
-            color: #a0aec0;
+            color: #6b7280;
             font-size: 1.5rem;
-            border: 2px solid #e2e8f0;
+            border: 2px solid #1f2937;
         }
 
         /* TITLE CELL */
         .tour-title {
             font-weight: 600;
-            color: #1a202c;
+            color: var(--text-primary);
             font-size: .9rem;
             white-space: nowrap;
             overflow: hidden;
@@ -280,7 +280,7 @@
 
         .page-info {
             font-size: .8rem;
-            color: #718096;
+            color: var(--text-muted);
         }
 
         .pagination {
@@ -444,33 +444,33 @@
                     <span class="input-group-text bg-white border-end-0" style="border-radius:8px 0 0 8px;">
                         <i class="bi bi-search text-muted" style="font-size:.85rem;"></i>
                     </span>
-                    <input type="text" name="q" value="@q" class="form-control border-start-0 ps-1" placeholder="Tur adý veya þehir..." style="border-radius:0 8px 8px 0;" />
+                    <input type="text" name="q" value="@q" class="form-control border-start-0 ps-1" placeholder="Tur adÄ± veya ï¿½ehir..." style="border-radius:0 8px 8px 0;" />
                 </div>
             </div>
             <div class="col-6 col-md-2">
-                <label class="form-label fw-semibold" style="font-size:.78rem;color:#718096">Ülke</label>
+                <label class="form-label fw-semibold" style="font-size:.78rem;color:#718096">Ãœlke</label>
                 <select name="country" class="form-select" style="border-radius:8px;font-size:.875rem;">
-                    <option value="">Tümü</option>
-                    <option value="Türkiye" selected="@(country == "Türkiye" ? "selected" : null)">Türkiye</option>
-                    <option value="Ýtalya" selected="@(country == "Ýtalya" ? "selected" : null)">Ýtalya</option>
+                    <option value="">TÃ¼mÃ¼</option>
+                    <option value="TÃ¼rkiye" selected="@(country == "TÃ¼rkiye" ? "selected" : null)">TÃ¼rkiye</option>
+                    <option value="Ä°talya" selected="@(country == "Ä°talya" ? "selected" : null)">Ä°talya</option>
                     <option value="Fransa" selected="@(country == "Fransa" ? "selected" : null)">Fransa</option>
-                    <option value="Ýspanya" selected="@(country == "Ýspanya" ? "selected" : null)">Ýspanya</option>
+                    <option value="Ä°spanya" selected="@(country == "Ä°spanya" ? "selected" : null)">Ä°spanya</option>
                     <option value="Yunanistan" selected="@(country == "Yunanistan" ? "selected" : null)">Yunanistan</option>
                 </select>
             </div>
             <div class="col-6 col-md-2">
-                <label class="form-label fw-semibold" style="font-size:.78rem;color:#718096">Baþlangýç</label>
+                <label class="form-label fw-semibold" style="font-size:.78rem;color:#718096">BaÅŸlangÄ±Ã§</label>
                 <input type="date" name="fromDate" value="@fromDate" class="form-control" style="border-radius:8px;font-size:.875rem;" />
             </div>
             <div class="col-6 col-md-2">
-                <label class="form-label fw-semibold" style="font-size:.78rem;color:#718096">Bitiþ</label>
+                <label class="form-label fw-semibold" style="font-size:.78rem;color:#718096">BitiÅŸ</label>
                 <input type="date" name="toDate" value="@toDate" class="form-control" style="border-radius:8px;font-size:.875rem;" />
             </div>
             <div class="col-6 col-md-2 d-flex gap-2">
                 <button type="submit" class="btn btn-primary flex-fill" style="border-radius:8px;font-size:.875rem;">
                     <i class="bi bi-funnel me-1"></i> Filtrele
                 </button>
-                <a href="?" class="btn btn-outline-secondary" style="border-radius:8px;font-size:.875rem;" aria-label="Filtreleri temizle">
+                <a href="#" class="btn btn-outline-secondary" style="border-radius:8px;font-size:.875rem;" aria-label="Filtreleri temizle">
                     <i class="bi bi-x-lg"></i>
                 </a>
             </div>
@@ -483,16 +483,16 @@
     <div class="table-card-header">
         <div class="title">
             <i class="bi bi-table" style="color:#a0aec0;"></i>
-            Tüm Turlar
+            TÃ¼m Turlar
             <span class="tour-count">@Model?.Count ?? 0 tur</span>
         </div>
         <div class="d-flex align-items-center gap-2">
-            <span style="font-size:.78rem;color:#a0aec0;">Sýrala:</span>
+            <span style="font-size:.78rem;color:#a0aec0;">SÄ±rala:</span>
             <select class="form-select form-select-sm" style="width:auto;border-radius:8px;font-size:.78rem;">
                 <option>En Yeni</option>
                 <option>En Eski</option>
                 <option>A-Z</option>
-                <option>Kapasiteye Göre</option>
+                <option>Kapasiteye GÃ¶re</option>
             </select>
         </div>
     </div>
@@ -501,7 +501,7 @@
     {
         <div class="empty-state">
             <i class="bi bi-map"></i>
-            <p>Gösterilecek tur bulunamadý.</p>
+            <p>GÃ¶sterilecek tur bulunamadÄ±.</p>
             <a href="#" class="btn btn-primary btn-sm mt-2" style="border-radius:8px;">Yeni Tur Ekle</a>
         </div>
     }
@@ -511,15 +511,15 @@
             <table class="tours-table">
                 <thead>
                     <tr>
-                        <th>Görsel</th>
-                        <th>Tur Baþlýðý</th>
-                        <th>Ülke</th>
-                        <th>Þehir</th>
+                        <th>GÃ¶rsel</th>
+                        <th>Tur BaÅŸlÄ±ÄŸÄ±</th>
+                        <th>Ãœlke</th>
+                        <th>Åžehir</th>
                         <th>Tarih</th>
-                        <th>Süre</th>
+                        <th>SÃ¼re</th>
                         <th>Kapasite</th>
-                        <th>Açýklama</th>
-                        <th>Ýþlemler</th>
+                        <th>AÃ§Ä±klama</th>
+                        <th>Ä°ÅŸlemler</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -536,34 +536,40 @@
                                     <div class="thumb-placeholder"><i class="bi bi-image"></i></div>
                                 }
                             </td>
-                            <td data-label="Baþlýk">
+                            <td data-label="BaÅŸlÄ±k">
                                 <span class="tour-title" title="@item.Title">@item.Title</span>
                             </td>
-                            <td data-label="Ülke">
+                            <td data-label="Ãœlke">
                                 <span class="loc-badge"><i class="bi bi-globe2"></i>@item.Country</span>
                             </td>
-                            <td data-label="Þehir">
+                            <td data-label="Åžehir">
                                 <span class="loc-badge"><i class="bi bi-geo-alt"></i>@item.City</span>
                             </td>
                             <td data-label="Tarih">
                                 <span class="date-cell"><i class="bi bi-calendar3 me-1 text-muted"></i>@item.TourDate.ToString("dd.MM.yyyy")</span>
                             </td>
-                            <td data-label="Süre">
+                            <td data-label="SÃ¼re">
                                 <span class="duration-pill"><i class="bi bi-clock me-1"></i>@item.DayNight</span>
                             </td>
                             <td data-label="Kapasite">
                                 <span class="cap-cell"><i class="bi bi-people"></i>@item.Capacity</span>
                             </td>
-                            <td data-label="Açýklama">
-                                <span class="desc-cell">@((item.Description?.Length > 80) ? item.Description.Substring(0, 80) + "…" : item.Description)</span>
+                            <td data-label="AÃ§Ä±klama">
+                                <span class="desc-cell">@((item.Description?.Length > 80) ? item.Description.Substring(0, 80) + "..." : item.Description)</span>
                             </td>
-                            <td data-label="Ýþlemler">
+                            <td data-label="Ä°ÅŸlemler">
                                 <div class="action-group">
                                     <a href="/AdminTour/UpdateTour/@item.TourId"
                                        class="btn-action btn-edit"
-                                       aria-label="@item.Title turunu düzenle"
-                                       title="Düzenle">
+                                       aria-label="@item.Title turunu dÃ¼zenle"
+                                       title="DÃ¼zenle">
                                         <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <a href="/AdminTour/TourBookings/@item.TourId"
+                                       class="btn-action btn-detail"
+                                       aria-label="@item.Title turu rezervasyonlarÄ±"
+                                       title="Rezervasyonlar">
+                                        <i class="bi bi-people"></i>
                                     </a>
                                     <button type="button"
                                             class="btn-action btn-delete"
@@ -574,7 +580,7 @@
                                     </button>
                                     <a asp-action="CommentListByTourId" asp-route-id="@item.TourId" asp-controller="Comment"
                                        class="btn-action btn-detail"
-                                       aria-label="@item.Title tur detayý"
+                                       aria-label="@item.Title tur detayÄ±"
                                        title="Detay">
                                         <i class="bi bi-eye"></i>
                                     </a>
@@ -588,11 +594,11 @@
 
         <!-- PAGINATION -->
         <div class="pagination-wrapper">
-            <span class="page-info">@Model.Count tur gösteriliyor</span>
+            <span class="page-info">@Model.Count tur gÃ¶steriliyor</span>
             <nav aria-label="Sayfalama">
                 <ul class="pagination pagination-sm">
                     <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Önceki"><i class="bi bi-chevron-left"></i></a>
+                        <a class="page-link" href="#" aria-label="Ã–nceki"><i class="bi bi-chevron-left"></i></a>
                     </li>
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -615,10 +621,10 @@
                     <i class="bi bi-exclamation-triangle"></i>
                 </div>
                 <h5 style="font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:#1a202c;margin-bottom:.5rem;">Tur Silinecek</h5>
-                <p class="text-muted" style="font-size:.875rem;" id="deleteModalBody">Bu turu silmek istediðinize emin misiniz?</p>
+                <p class="text-muted" style="font-size:.875rem;" id="deleteModalBody">Bu turu silmek istediÄŸinize emin misiniz?</p>
             </div>
             <div class="modal-footer border-0 pt-0 pb-4 px-4 d-flex gap-2">
-                <button type="button" class="btn btn-light flex-fill" data-bs-dismiss="modal" style="border-radius:9px;font-size:.875rem;">Ýptal</button>
+                <button type="button" class="btn btn-light flex-fill" data-bs-dismiss="modal" style="border-radius:9px;font-size:.875rem;">Ä°ptal</button>
                 <form id="deleteForm" method="post" style="flex:1">
                     @Html.AntiForgeryToken()
                     <button type="submit" class="btn btn-danger w-100" style="border-radius:9px;font-size:.875rem;">
@@ -634,7 +640,7 @@
     <script>
         function confirmDelete(tourId, tourTitle) {
             document.getElementById('deleteModalBody').textContent =
-                '"' + tourTitle + '" adlý tur kalýcý olarak silinecek. Bu iþlem geri alýnamaz.';
+                '"' + tourTitle + '" AdlÄ± tur kalÄ±cÄ± olarak silinecek. Bu iÅŸlem geri alÄ±namaz.';
             document.getElementById('deleteForm').action = '/AdminTour/RemoveTour/' + tourId;
             new bootstrap.Modal(document.getElementById('deleteModal')).show();
         }

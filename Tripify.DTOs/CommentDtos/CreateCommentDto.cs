@@ -8,5 +8,7 @@ namespace Tripify.DTOs.CommentDtos
         public DateTime CommentDate { get; set; }
         public bool IsStatus { get; set; }
         public string TourId { get; set; }
+        public string NameSurname { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

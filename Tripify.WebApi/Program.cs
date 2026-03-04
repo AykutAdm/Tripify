@@ -1,5 +1,10 @@
 using Microsoft.Extensions.Options;
 using System.Reflection;
+using Tripify.WebApi.Services.AboutServices;
+using Tripify.WebApi.Services.BookingServices;
+using Tripify.WebApi.Services.GuideServices;
+using Tripify.WebApi.Services.OpenAIServices;
+using Tripify.WebApi.Services.TestimonialServices;
 using Tripify.WebAPI.Services.CategoryServices;
 using Tripify.WebAPI.Services.CommentServices;
 using Tripify.WebAPI.Services.TourServices;
@@ -16,6 +21,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddScoped<ITourService, TourService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
+builder.Services.AddScoped<IGuideService, GuideService>();
+builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+builder.Services.AddScoped<IOpenAIService, OpenAIService>();
+builder.Services.AddScoped<IBookingService, BookingService>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());

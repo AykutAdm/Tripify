@@ -1,0 +1,44 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+@await Component.InvokeAsync("_TourHeadComponentPartial")
+
+<body class="home-thh">
+
+    <header class="main_header_area position-absolute">
+        <div class="header_menu" id="header_menu">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-3 pt-3">
+                        <div class="navbar-header">
+                            <a class="navbar-brand d-flex align-items-center" href="/Default/Index">
+                                <img src="~/travelin/travelin/images/favicon.png" alt="" class="me-2" style="height: 36px;" />
+                                <span class="logo-text text-white fw-bold" style="font-size: 1.5rem; letter-spacing: 0.5px;">Tripify</span>
+                            </a>
+                        </div>
+                        @await Component.InvokeAsync("_NavbarComponentPartial")
+
+
+                        <div id="slicknav-mobile"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    @await Component.InvokeAsync("_TourFooterComponentPartial")
+
+    <div id="back-to-top">
+        <a href="#"></a>
+    </div>
+
+    @await Component.InvokeAsync("_TourScriptsComponentPartial")
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

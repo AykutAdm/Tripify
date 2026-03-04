@@ -1,0 +1,80 @@
+﻿@model List<ResultAboutDto>
+
+<section class="about-us pt-6" style="background-image: url(/travelin/travelin/images/background_pattern.png); background-position: bottom right">
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <div class="about-image-box">
+                <div class="row d-flex align-items-center justify-content-between">
+                    <div class="col-lg-6 ps-4">
+                        <div class="about-content text-center text-lg-start">
+                            <h4 class="theme d-inline-block mb-0">Bizi Yakından Tanıyın</h4>
+                            <h2 class="border-b mb-2 pb-1">@item.Title</h2>
+                            <p class="border-b mb-2 pb-2">
+                                @item.Description
+                            </p>
+                            <div class="about-listing">
+                                <ul class="d-flex justify-content-between">
+                                    <li><i class="icon-location-pin theme"></i> Profesyonel Tur Rehberleri</li>
+                                    <li><i class="icon-briefcase theme"></i> Uygun ve Şeffaf Fiyatlar</li>
+                                    <li><i class="icon-folder theme"></i> Güvenilir Tur Paketleri</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4 pe-4">
+                        <div class="about-image" style="animation: none; background: transparent">
+                            <img src="/travelin/travelin/images/travel.png" alt="Tripify Seyahat Görseli" />
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <!-- Counter -->
+                        <div class="counter-main w-75 float-start z-index3 position-relative">
+                            <div class="counter p-4 pb-0 box-shadow bg-white rounded mt-minus">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                                        <div class="counter-item border-end pe-4">
+                                            <div class="counter-content">
+                                                <h2>5+</h2>
+                                                <span class="m-0">Yıllık Geliştirme Deneyimi</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                                        <div class="counter-item border-end pe-4">
+                                            <div class="counter-content">
+                                                <h2>120+</h2>
+                                                <span class="m-0">Aktif Tur Seçeneği</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                                        <div class="counter-item border-end pe-4">
+                                            <div class="counter-content">
+                                                <h2>500+</h2>
+                                                <span class="m-0">Memnun Kullanıcı</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                                        <div class="counter-item">
+                                            <div class="counter-content">
+                                                <h2>50+</h2>
+                                                <span class="m-0">Popüler Destinasyon</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Counter -->
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="white-overlay"></div>
+</section>

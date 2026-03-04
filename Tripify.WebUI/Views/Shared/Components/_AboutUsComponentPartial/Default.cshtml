@@ -1,0 +1,41 @@
+@model List<ResultAboutDto>
+
+
+<section class="about-us" style="background-image: url(/travelin/travelin/images/shape4.png); background-position: center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="about_us__ot position-relative">
+                    <img src="~/travelin/travelin/images/travel-1.png" alt="Adventure Image" class="img-fluid rounded mt-3 w-90" />
+                    <img src="~/travelin/travelin/images/cloud-1.png" class="cloud__png1" alt="" />
+                    <img src="~/travelin/travelin/images/cloud-2.png" class="cloud__png2" alt="" />
+                    <img src="~/travelin/travelin/images/cloud-3.png" class="cloud__png3" alt="" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                @foreach (var item in Model)
+                {
+                    <div class="d-flex flex-column">
+                        <h4 class="theme mb-0">@Localizer["About_Title"]</h4>
+                        <h2 class="fw-bold">@item.Title</h2>
+                        <p class="border-b mb-2 pb-2">
+                            @item.Description
+                        </p>
+                        <div class="about-listing">
+                            <ul class="d-flex justify-content-between">
+                                <li><i class="icon-location-pin theme"></i> @Localizer["About_Guide"]</li>
+                                <li><i class="icon-briefcase theme"></i> @Localizer["About_Price"]</li>
+                                <li><i class="icon-folder theme"></i> @Localizer["About_Reliable"]</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4">
+                            <a href="/About/Index/" class="nir-btn">@Localizer["About_More"]</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="white-overlay"></div>
+</section>
+

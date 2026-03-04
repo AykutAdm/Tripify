@@ -1,0 +1,65 @@
+@model Tripify.WebUI.Dtos.TestimonialDtos.GetTestimonialByIdDto
+@{
+    ViewData["Title"] = "Referans Güncelle";
+    Layout = "~/Views/Shared/_TourLayout.cshtml";
+}
+
+<div class="page-header mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+        <h1 class="page-title h4 mb-1">Referans Güncelle</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                <li class="breadcrumb-item"><a href="/AdminTestimonial/TestimonialList">Referanslar</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Güncelle</li>
+            </ol>
+        </nav>
+    </div>
+    <a href="/AdminTestimonial/TestimonialList" class="btn btn-outline-secondary d-flex align-items-center gap-2" style="border-radius:10px;">
+        <i class="bi bi-arrow-left"></i> Listeye Dön
+    </a>
+</div>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <form method="post">
+            <input type="hidden" asp-for="TestimonialId" />
+
+            <div class="mb-3">
+                <label asp-for="TestimonialName" class="form-label fw-semibold">Ad Soyad</label>
+                <input asp-for="TestimonialName" class="form-control" />
+                <span asp-validation-for="TestimonialName" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label fw-semibold">Başlık</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label fw-semibold">Açıklama</label>
+                <textarea asp-for="Description" rows="4" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ImageUrl" class="form-label fw-semibold">Görsel URL</label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger small"></span>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-3">
+                <a href="/AdminTestimonial/TestimonialList" class="btn btn-outline-secondary">İptal</a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save me-1"></i> Güncelle
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

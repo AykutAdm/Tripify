@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" targetNamespace="http://www.w3.org/1999/xhtml" elementFormDefault="qualified">
+    <xsd:import schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <xsd:element name="root" type="rootType"/>
+    <xsd:complexType name="rootType">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="data" type="dataType"/>
+        <xsd:element name="resheader" type="resheaderType"/>
+      </xsd:choice>
+    </xsd:complexType>
+    <xsd:complexType name="resheaderType">
+      <xsd:sequence>
+        <xsd:element name="value" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+      <xsd:attribute name="name" use="required" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="dataType">
+      <xsd:sequence>
+        <xsd:element name="value" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+      <xsd:attribute name="name" use="required" type="xsd:string"/>
+      <xsd:attribute name="type" type="xsd:string"/>
+      <xsd:attribute name="mimetype" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Home" xml:space="preserve"><value>Home</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>About Us</value></data>
+  <data name="Nav_Tours" xml:space="preserve"><value>Tours</value></data>
+  <data name="Footer_WeSupport" xml:space="preserve"><value>We Support:</value></data>
+  <data name="Footer_FollowInstagram" xml:space="preserve"><value>Follow on Instagram</value></data>
+  <data name="Footer_QuickLinks" xml:space="preserve"><value>Quick Links</value></data>
+  <data name="Footer_AboutUs" xml:space="preserve"><value>About Us</value></data>
+  <data name="Footer_TourInfo" xml:space="preserve"><value>Tour and Booking Info</value></data>
+  <data name="Footer_Privacy" xml:space="preserve"><value>Privacy Policy</value></data>
+  <data name="Footer_Terms" xml:space="preserve"><value>Terms of Use</value></data>
+  <data name="Footer_CustomerService" xml:space="preserve"><value>Customer Service</value></data>
+  <data name="Footer_CancelRefund" xml:space="preserve"><value>Cancellation &amp; Refund Policy</value></data>
+  <data name="Footer_Categories" xml:space="preserve"><value>Categories</value></data>
+  <data name="Footer_DomesticTours" xml:space="preserve"><value>Domestic Tours</value></data>
+  <data name="Footer_InternationalTours" xml:space="preserve"><value>International Tours</value></data>
+  <data name="Footer_CultureTours" xml:space="preserve"><value>Culture Tours</value></data>
+  <data name="Footer_NatureTours" xml:space="preserve"><value>Nature &amp; Adventure Tours</value></data>
+  <data name="Footer_DayTours" xml:space="preserve"><value>Day Tours</value></data>
+  <data name="Footer_SpecialEvents" xml:space="preserve"><value>Special Events</value></data>
+  <data name="Footer_Newsletter" xml:space="preserve"><value>Subscribe to Our Newsletter</value></data>
+  <data name="Footer_NewsletterDesc" xml:space="preserve"><value>Be the first to know about campaigns, new tour routes and special discounts. Don't miss exclusive offers by joining our email newsletter.</value></data>
+  <data name="Footer_Subscribe" xml:space="preserve"><value>Subscribe</value></data>
+  <data name="Footer_EmailPlaceholder" xml:space="preserve"><value>Your Email Address</value></data>
+  <data name="Footer_Phone" xml:space="preserve"><value>Phone:</value></data>
+  <data name="Footer_Address" xml:space="preserve"><value>Address:</value></data>
+  <data name="Footer_Email" xml:space="preserve"><value>Email:</value></data>
+  <data name="Footer_Website" xml:space="preserve"><value>Website:</value></data>
+  <data name="Footer_Copyright" xml:space="preserve"><value>| Travelin. All Rights Reserved.</value></data>
+  <data name="Footer_AboutDesc" xml:space="preserve"><value>We set out to make your dream trip a reality. From culture tours to nature getaways, we offer unforgettable experiences on domestic and international routes. With our expert guides, safe transportation and carefully planned programs, we take care of every detail for you.</value></data>
+  <data name="Banner_Slogan" xml:space="preserve"><value>Travel the thing you buy that makes you richer</value></data>
+  <data name="Banner_Destination" xml:space="preserve"><value>Destination</value></data>
+  <data name="Banner_TravelType" xml:space="preserve"><value>Travel Type</value></data>
+  <data name="Banner_TourDuration" xml:space="preserve"><value>Tour Duration</value></data>
+  <data name="Banner_SearchNow" xml:space="preserve"><value>Search Now</value></data>
+  <data name="Banner_CityTour" xml:space="preserve"><value>City Tour</value></data>
+  <data name="Banner_FamilyTour" xml:space="preserve"><value>Family Tour</value></data>
+  <data name="Banner_5Days" xml:space="preserve"><value>5 days</value></data>
+  <data name="Banner_7Days" xml:space="preserve"><value>7 Days</value></data>
+  <data name="About_Title" xml:space="preserve"><value>About Us</value></data>
+  <data name="About_Guide" xml:space="preserve"><value>Tour Guide</value></data>
+  <data name="About_Price" xml:space="preserve"><value>Affordable Price</value></data>
+  <data name="About_Reliable" xml:space="preserve"><value>Reliable Tour Package</value></data>
+  <data name="About_More" xml:space="preserve"><value>More</value></data>
+  <data name="Steps_Title" xml:space="preserve"><value>Our Process</value></data>
+  <data name="Steps_Subtitle" xml:space="preserve"><value>Simple Steps to Your Dream Vacation</value></data>
+  <data name="Steps_Search" xml:space="preserve"><value>Search Your Route</value></data>
+  <data name="Steps_SearchDesc" xml:space="preserve"><value>Discover available options by entering your desired location, travel dates and preferences.</value></data>
+  <data name="Steps_Select" xml:space="preserve"><value>Choose Package</value></data>
+  <data name="Steps_SelectDesc" xml:space="preserve"><value>Review carefully prepared offers and choose the tour package that suits your needs.</value></data>
+  <data name="Steps_Book" xml:space="preserve"><value>Complete Your Booking</value></data>
+  <data name="Steps_BookDesc" xml:space="preserve"><value>Enter your information, make the payment and get your confirmation to start your adventure!</value></data>
+  <data name="Testimonial_Title" xml:space="preserve"><value>Customer Reviews</value></data>
+  <data name="Testimonial_Subtitle" xml:space="preserve"><value>Feedback from Our Happy Customers</value></data>
+  <data name="TopDest_Title" xml:space="preserve"><value>Recently Added Routes</value></data>
+  <data name="TopDest_Subtitle" xml:space="preserve"><value>Discover: Most Popular Routes</value></data>
+  <data name="TopDest_Desc" xml:space="preserve"><value>Discover the best routes and enjoy unforgettable travel experiences.</value></data>
+  <data name="TourList_Title" xml:space="preserve"><value>Tour List</value></data>
+  <data name="TourList_Home" xml:space="preserve"><value>Home</value></data>
+  <data name="TourList_Breadcrumb" xml:space="preserve"><value>Our Current Tours</value></data>
+  <data name="TourDetail_Title" xml:space="preserve"><value>Tour Detail</value></data>
+  <data name="TourDetail_Home" xml:space="preserve"><value>Home</value></data>
+  <data name="TourDetail_Map" xml:space="preserve"><value>Map</value></data>
+  <data name="TourDetail_Booking" xml:space="preserve"><value>Make a Booking</value></data>
+  <data name="TourDetail_ChooseDate" xml:space="preserve"><value>Your chosen date is</value></data>
+  <data name="TourDetail_NoOfPeople" xml:space="preserve"><value>No. Of People</value></data>
+  <data name="TourDetail_BookNow" xml:space="preserve"><value>Book Now</value></data>
+  <data name="TourDetail_Change" xml:space="preserve"><value>Change</value></data>
+  <data name="TourDetail_Days" xml:space="preserve"><value>days</value></data>
+  <data name="Lang_Turkish" xml:space="preserve"><value>Türkçe</value></data>
+  <data name="Lang_English" xml:space="preserve"><value>English</value></data>
+  <data name="Lang_German" xml:space="preserve"><value>Deutsch</value></data>
+  <data name="Lang_French" xml:space="preserve"><value>Français</value></data>
+  <data name="Lang_Spanish" xml:space="preserve"><value>Español</value></data>
+</root>

@@ -1,0 +1,101 @@
+@model List<ResultGuideDto>
+@{
+    ViewData["Title"] = "Rehberler";
+    Layout = "~/Views/Shared/_TourLayout.cshtml";
+}
+
+<div class="page-header mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+        <h1 class="page-title h4 mb-1">Rehber Listesi</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Rehberler</li>
+            </ol>
+        </nav>
+    </div>
+    <a href="/AdminGuide/CreateGuide" class="btn btn-primary d-flex align-items-center gap-2" style="border-radius:10px;">
+        <i class="bi bi-plus-lg"></i> Yeni Rehber Ekle
+    </a>
+</div>
+
+<div class="card shadow-sm border-0">
+    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-people text-secondary"></i>
+            <span class="fw-semibold">Kayıtlı Rehberler</span>
+            <span class="badge bg-light text-muted border">@Model?.Count ?? 0 kayıt</span>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        @if (Model == null || !Model.Any())
+        {
+            <div class="p-4 text-center text-muted">
+                <i class="bi bi-emoji-frown mb-2" style="font-size:2rem;"></i>
+                <p class="mb-1">Henüz kayıtlı bir rehber bulunmuyor.</p>
+                <a href="/AdminGuide/CreateGuide" class="btn btn-sm btn-primary mt-2">İlk rehberi ekle</a>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Görsel</th>
+                            <th>Ad Soyad</th>
+                            <th>Ünvan</th>
+                            <th>Açıklama</th>
+                            <th>Tur Id</th>
+                            <th style="width:120px;">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (!string.IsNullOrWhiteSpace(item.ImageUrl))
+                                    {
+                                        <img src="@item.ImageUrl" alt="@item.GuideNameSurname" style="width:60px;height:60px;object-fit:cover;border-radius:50%;" />
+                                    }
+                                    else
+                                    {
+                                        <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-light border" style="width:60px;height:60px;">
+                                            <i class="bi bi-person text-muted"></i>
+                                        </div>
+                                    }
+                                </td>
+                                <td class="fw-semibold">@item.GuideNameSurname</td>
+                                <td>@item.Title</td>
+                                <td>
+                                    @{
+                                        var desc = item.Description;
+                                        if (!string.IsNullOrEmpty(desc) && desc.Length > 80)
+                                        {
+                                            desc = desc.Substring(0, 80) + "...";
+                                        }
+                                    }
+                                    <span class="text-muted" style="font-size:.85rem;">@desc</span>
+                                </td>
+                                <td>@item.TourId</td>
+                                <td>
+                                    <div class="d-flex gap-1">
+                                        <a href="/AdminGuide/UpdateGuide/@item.GuideId" class="btn btn-sm btn-warning">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                        <a href="/AdminGuide/RemoveGuide/@item.GuideId" class="btn btn-sm btn-danger"
+                                           onclick="return confirm('Bu rehberi silmek istediğinize emin misiniz?');">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+

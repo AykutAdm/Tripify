@@ -556,11 +556,12 @@
              $(this).removeClass('open');
          }
      });
-     //Do not include! This prevents the form from submitting for DEMO purposes only!
-     $('form').submit(function(event) {
-         event.preventDefault();
-         return false;
-     });
+    //Do not include! This prevents the form from submitting for DEMO purposes only!
+    // REMOVED: Bu kod tüm formların çalışmasını engelliyordu
+    // $('form').submit(function(event) {
+    //     event.preventDefault();
+    //     return false;
+    // });
 
  })(jQuery);
 

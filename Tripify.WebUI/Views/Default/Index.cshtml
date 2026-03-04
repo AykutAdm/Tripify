@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Ana Sayfa - Tripify";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@await Component.InvokeAsync("_BannerComponentPartial")
+
+@await Component.InvokeAsync("_TopDestinationsComponentPartial")
+
+@await Component.InvokeAsync("_AboutUsComponentPartial")
+
+@await Component.InvokeAsync("_StepsComponentPartial")
+
+@await Component.InvokeAsync("_TestimonialComponentPartial")

@@ -1,0 +1,61 @@
+﻿@model Tripify.WebUI.Dtos.MailDtos.MailRequestDto
+@{
+    ViewData["Title"] = "StatusMail";
+    Layout = "~/Views/Shared/_TourLayout.cshtml";
+    var booking = ViewBag.Booking as Tripify.WebUI.Dtos.BookingDtos.GetBookingByIdDto;
+}
+
+<div class="page-header mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+        <h1 class="page-title h4 mb-1">Rezervasyon Durum Maili</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                <li class="breadcrumb-item"><a href="/AdminBooking/BookingList">Rezervasyonlar</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Mail Gönder</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+@if (booking != null)
+{
+    <div class="card mb-3">
+        <div class="card-body">
+            <strong>Tur:</strong> @booking.Title <br />
+            <strong>Müşteri:</strong> @booking.FirstName @booking.LastName (@booking.Email) <br />
+            <strong>Tarih:</strong> @booking.CheckInDate.ToString("dd.MM.yyyy") - @booking.CheckOutDate.ToString("dd.MM.yyyy")
+        </div>
+    </div>
+}
+
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            <input type="hidden" asp-for="BookingId" />
+            <input type="hidden" asp-for="Status" />
+
+            <div class="mb-3">
+                <label asp-for="ReceiverEmail" class="form-label">Alıcı E-posta</label>
+                <input asp-for="ReceiverEmail" class="form-control" readonly />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Subject" class="form-label">Konu</label>
+                <input asp-for="Subject" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="MessageDetail" class="form-label">Mesaj</label>
+                <textarea asp-for="MessageDetail" rows="8" class="form-control"></textarea>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2">
+                <a asp-action="BookingList" class="btn btn-outline-secondary">İptal</a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-send me-1"></i> Maili Gönder
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

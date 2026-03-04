@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Tripify.DTOs.TourDtos;
+using Tripify.WebApi.Services.OpenAIServices;
 using Tripify.WebAPI.Services.TourServices;
 
 namespace Tripify.WebAPI.Controllers
@@ -9,10 +10,12 @@ namespace Tripify.WebAPI.Controllers
     public class ToursController : ControllerBase
     {
         private readonly ITourService _tourService;
+        private readonly IOpenAIService _openAIService;
 
-        public ToursController(ITourService tourService)
+        public ToursController(ITourService tourService, IOpenAIService openAIService)
         {
             _tourService = tourService;
+            _openAIService = openAIService;
         }
 
         [HttpGet]
@@ -29,6 +32,24 @@ namespace Tripify.WebAPI.Controllers
             if (value == null)
                 return NotFound();
             return Ok(value);
+        }
+
+        [HttpGet("{id}/what-to-expect")]
+        public async Task<IActionResult> GenerateWhatToExpect(string id)
+        {
+            var tour = await _tourService.GetTourByIdAsync(id);
+            if (tour == null)
+                return NotFound("Tur bulunamadı");
+
+            var location = $"{tour.City}, {tour.Country}";
+            var whatToExpect = await _openAIService.GenerateWhatToExpectAsync(
+                tour.Title,
+                tour.Description,
+                location,
+                tour.DayNight
+            );
+
+            return Ok(new { content = whatToExpect });
         }
 
         [HttpPost]
@@ -50,6 +71,13 @@ namespace Tripify.WebAPI.Controllers
         {
             await _tourService.DeleteTourAsync(id);
             return Ok("Tour deleted successfully");
+        }
+
+        [HttpGet("GetLast4Tour")]
+        public async Task<IActionResult> GetLast4Tour()
+        {
+            var values = await _tourService.GetLast4TourAsync();
+            return Ok(values);
         }
     }
 }

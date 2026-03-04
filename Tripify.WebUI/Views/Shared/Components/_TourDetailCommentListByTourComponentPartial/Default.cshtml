@@ -1,0 +1,75 @@
+@model List<Tripify.WebUI.Dtos.CommentDtos.ResultCommentListByTourIdDto>
+
+<div class="single-comments single-box mb-4">
+    <h5 class="border-b pb-2 mb-2">
+        <i class="fa fa-comments me-2"></i>
+        @Model.Count Yorum
+    </h5>
+    
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var item in Model)
+        {
+            <div class="comment-box mb-3">
+                <div class="comment-image">
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="@item.ImageUrl" alt="@item.NameSurname" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                    }
+                    else
+                    {
+                        <img src="~/images/reviewer/default-avatar.jpg" alt="Kullanıcı" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                    }
+                </div>
+                <div class="comment-content rounded">
+                    <h5 class="mb-1">
+                        @if (!string.IsNullOrEmpty(item.NameSurname))
+                        {
+                            @item.NameSurname
+                        }
+                        else
+                        {
+                            <text>Misafir Yorumu</text>
+                        }
+                    </h5>
+                    <p class="comment-date text-muted">
+                        <i class="fa fa-calendar me-1"></i>
+                        @item.CommentDate.ToString("dd MMMM yyyy")
+                    </p>
+                    <div class="comment-rate mb-2">
+                        <div class="rating mar-right-15">
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                @if (i <= item.Score)
+                                {
+                                    <span class="fa fa-star checked"></span>
+                                }
+                                else
+                                {
+                                    <span class="fa fa-star"></span>
+                                }
+                            }
+                        </div>
+                        <span class="comment-title fw-bold">@item.Headline</span>
+                    </div>
+
+                    <p class="comment mb-2">@item.CommentDetail</p>
+                    
+                    @if (item.IsStatus)
+                    {
+                        <span class="badge bg-success">
+                            <i class="fa fa-check me-1"></i>Onaylandı
+                        </span>
+                    }
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="alert alert-info text-center">
+            <i class="fa fa-info-circle me-2"></i>
+            Bu tur için henüz yorum yapılmamış. İlk yorumu siz yapın!
+        </div>
+    }
+</div>

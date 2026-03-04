@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml" targetNamespace="http://www.w3.org/1999/xhtml" elementFormDefault="qualified">
+    <xsd:import schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+    <xsd:element name="root" type="rootType"/>
+    <xsd:complexType name="rootType">
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element name="data" type="dataType"/>
+        <xsd:element name="resheader" type="resheaderType"/>
+      </xsd:choice>
+    </xsd:complexType>
+    <xsd:complexType name="resheaderType">
+      <xsd:sequence>
+        <xsd:element name="value" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+      <xsd:attribute name="name" use="required" type="xsd:string"/>
+    </xsd:complexType>
+    <xsd:complexType name="dataType">
+      <xsd:sequence>
+        <xsd:element name="value" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+      <xsd:attribute name="name" use="required" type="xsd:string"/>
+      <xsd:attribute name="type" type="xsd:string"/>
+      <xsd:attribute name="mimetype" type="xsd:string"/>
+    </xsd:complexType>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Nav_Home" xml:space="preserve"><value>Ana Sayfa</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>Hakkımızda</value></data>
+  <data name="Nav_Tours" xml:space="preserve"><value>Turlar</value></data>
+  <data name="Footer_WeSupport" xml:space="preserve"><value>Destekliyoruz:</value></data>
+  <data name="Footer_FollowInstagram" xml:space="preserve"><value>Instagram'da Takip Edin</value></data>
+  <data name="Footer_QuickLinks" xml:space="preserve"><value>Hızlı Linkler</value></data>
+  <data name="Footer_AboutUs" xml:space="preserve"><value>Hakkımızda</value></data>
+  <data name="Footer_TourInfo" xml:space="preserve"><value>Tur ve Rezervasyon Bilgileri</value></data>
+  <data name="Footer_Privacy" xml:space="preserve"><value>Gizlilik Politikası</value></data>
+  <data name="Footer_Terms" xml:space="preserve"><value>Kullanım Şartları</value></data>
+  <data name="Footer_CustomerService" xml:space="preserve"><value>Müşteri Hizmetleri</value></data>
+  <data name="Footer_CancelRefund" xml:space="preserve"><value>İptal ve İade Politikası</value></data>
+  <data name="Footer_Categories" xml:space="preserve"><value>Kategoriler</value></data>
+  <data name="Footer_DomesticTours" xml:space="preserve"><value>Yurt İçi Turlar</value></data>
+  <data name="Footer_InternationalTours" xml:space="preserve"><value>Yurt Dışı Turlar</value></data>
+  <data name="Footer_CultureTours" xml:space="preserve"><value>Kültür Turları</value></data>
+  <data name="Footer_NatureTours" xml:space="preserve"><value>Doğa &amp; Macera Turları</value></data>
+  <data name="Footer_DayTours" xml:space="preserve"><value>Günübirlik Turlar</value></data>
+  <data name="Footer_SpecialEvents" xml:space="preserve"><value>Özel Organizasyonlar</value></data>
+  <data name="Footer_Newsletter" xml:space="preserve"><value>Bültenimize Abone Olun</value></data>
+  <data name="Footer_NewsletterDesc" xml:space="preserve"><value>Kampanyalar, yeni tur rotaları ve özel indirimlerden ilk siz haberdar olun. E-posta bültenimize katılarak ayrıcalıklı fırsatları kaçırmayın.</value></data>
+  <data name="Footer_Subscribe" xml:space="preserve"><value>Abone Ol</value></data>
+  <data name="Footer_EmailPlaceholder" xml:space="preserve"><value>E-posta Adresiniz</value></data>
+  <data name="Footer_Phone" xml:space="preserve"><value>Telefon:</value></data>
+  <data name="Footer_Address" xml:space="preserve"><value>Adres:</value></data>
+  <data name="Footer_Email" xml:space="preserve"><value>E-posta:</value></data>
+  <data name="Footer_Website" xml:space="preserve"><value>Web Sitesi:</value></data>
+  <data name="Footer_Copyright" xml:space="preserve"><value>| Travelin. Tüm Hakları Saklıdır.</value></data>
+  <data name="Footer_AboutDesc" xml:space="preserve"><value>Hayalinizdeki seyahati gerçeğe dönüştürmek için yola çıktık. Kültür turlarından doğa kaçamaklarına, yurt içi ve yurt dışı rotalarda unutulmaz deneyimler sunuyoruz. Alanında uzman rehberlerimiz, güvenli ulaşım ve özenle planlanmış programlarımızla her detayı sizin için düşünüyoruz.</value></data>
+  <data name="Banner_Slogan" xml:space="preserve"><value>Travel the thing you buy that makes you richer</value></data>
+  <data name="Banner_Destination" xml:space="preserve"><value>Destination</value></data>
+  <data name="Banner_TravelType" xml:space="preserve"><value>Travel Type</value></data>
+  <data name="Banner_TourDuration" xml:space="preserve"><value>Tour Duration</value></data>
+  <data name="Banner_SearchNow" xml:space="preserve"><value>Search Now</value></data>
+  <data name="Banner_CityTour" xml:space="preserve"><value>City Tour</value></data>
+  <data name="Banner_FamilyTour" xml:space="preserve"><value>Family Tour</value></data>
+  <data name="Banner_5Days" xml:space="preserve"><value>5 days</value></data>
+  <data name="Banner_7Days" xml:space="preserve"><value>7 Days</value></data>
+  <data name="About_Title" xml:space="preserve"><value>Hakkımızda</value></data>
+  <data name="About_Guide" xml:space="preserve"><value>Tur Rehberi</value></data>
+  <data name="About_Price" xml:space="preserve"><value>Uygun Fiyat</value></data>
+  <data name="About_Reliable" xml:space="preserve"><value>Güvenilir Tur Paketi</value></data>
+  <data name="About_More" xml:space="preserve"><value>Daha Fazlası</value></data>
+  <data name="Steps_Title" xml:space="preserve"><value>Süreçlerimiz</value></data>
+  <data name="Steps_Subtitle" xml:space="preserve"><value>Hayalinizdeki Tatile Giden Basit Adımlar</value></data>
+  <data name="Steps_Search" xml:space="preserve"><value>Rotanızı Arayın</value></data>
+  <data name="Steps_SearchDesc" xml:space="preserve"><value>İstediğiniz lokasyonu, seyahat tarihlerini ve tercihlerinizi girerek mevcut seçenekleri keşfedin.</value></data>
+  <data name="Steps_Select" xml:space="preserve"><value>Paketi Seçin</value></data>
+  <data name="Steps_SelectDesc" xml:space="preserve"><value>Özenle hazırlanmış teklifleri inceleyin ve ihtiyaçlarınıza uygun tur paketini seçin.</value></data>
+  <data name="Steps_Book" xml:space="preserve"><value>Rezervasyonunuzu Tamamlayın</value></data>
+  <data name="Steps_BookDesc" xml:space="preserve"><value>Bilgilerinizi girin, ödemeyi yapın ve maceranıza başlamak için onayınızı alın!</value></data>
+  <data name="Testimonial_Title" xml:space="preserve"><value>Müşteri Yorumları</value></data>
+  <data name="Testimonial_Subtitle" xml:space="preserve"><value>Mutlu Müşterilerimizin Geri Bildirimleri</value></data>
+  <data name="TopDest_Title" xml:space="preserve"><value>En Son Eklenen Rotalar</value></data>
+  <data name="TopDest_Subtitle" xml:space="preserve"><value>Keşfet: En Popüler Rotalar</value></data>
+  <data name="TopDest_Desc" xml:space="preserve"><value>En iyi rotaları keşfedin ve unutulmaz seyahat deneyimlerinin tadını çıkarın.</value></data>
+  <data name="TourList_Title" xml:space="preserve"><value>Tur Listesi</value></data>
+  <data name="TourList_Home" xml:space="preserve"><value>Ana Sayfa</value></data>
+  <data name="TourList_Breadcrumb" xml:space="preserve"><value>Güncel Turlarımız</value></data>
+  <data name="TourDetail_Title" xml:space="preserve"><value>Tur Detayı</value></data>
+  <data name="TourDetail_Home" xml:space="preserve"><value>Anasayfa</value></data>
+  <data name="TourDetail_Map" xml:space="preserve"><value>Harita</value></data>
+  <data name="TourDetail_Booking" xml:space="preserve"><value>Rezervasyon Yap</value></data>
+  <data name="TourDetail_ChooseDate" xml:space="preserve"><value>Seçtiğiniz tarih</value></data>
+  <data name="TourDetail_NoOfPeople" xml:space="preserve"><value>Kişi Sayısı</value></data>
+  <data name="TourDetail_BookNow" xml:space="preserve"><value>Rezervasyon Yap</value></data>
+  <data name="TourDetail_Change" xml:space="preserve"><value>Değiştir</value></data>
+  <data name="TourDetail_Days" xml:space="preserve"><value>gün</value></data>
+  <data name="Lang_Turkish" xml:space="preserve"><value>Türkçe</value></data>
+  <data name="Lang_English" xml:space="preserve"><value>English</value></data>
+  <data name="Lang_German" xml:space="preserve"><value>Deutsch</value></data>
+  <data name="Lang_French" xml:space="preserve"><value>Français</value></data>
+  <data name="Lang_Spanish" xml:space="preserve"><value>Español</value></data>
+</root>

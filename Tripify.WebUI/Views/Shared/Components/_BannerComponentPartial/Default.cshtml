@@ -1,0 +1,70 @@
+<!-- banner starts -->
+<section class="banner overflow-hidden">
+    <div class="banner-main">
+        <div class="banner-image">
+            <div class="video-banner">
+                <video autoplay muted loop id="vid" class="w-100">
+                    <source src="~/travelin/travelin/images/tour.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="dot-overlay"></div>
+        </div>
+        <div class="banner-content">
+            <div class="entry-meta mb-0">
+                <span class="entry-category"><a href="/Tour/TourList" class="white">@Localizer["Banner_Brand"]</a></span>
+            </div>
+            <h1 class="mb-0"><a href="/Tour/TourList" class="white">@Localizer["Banner_Slogan"]</a></h1>
+            <div class="banner-booking mt-3">
+                <div class="row align-items-center form-content rounded position-relative">
+                    <div class="col-lg-1">
+                        <h4 class="form-title py-4 white mb-0 d-lg-flex align-items-center justify-content-center">
+                            <i class="icon-location-pin fs-2"></i>
+                        </h4>
+                    </div>
+                    <div class="col-lg-11">
+                        <div class="form-content-in d-lg-flex align-items-center gap-3">
+                            <div class="form-group">
+                                <div class="input-box">
+                                    <select class="niceSelect">
+                                        <option value="1">@Localizer["Banner_Destination"]</option>
+                                        <option value="2">Argentina</option>
+                                        <option value="3">Belgium</option>
+                                        <option value="4">Canada</option>
+                                        <option value="5">Denmark</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-box">
+                                    <input type="date" name="date" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-box">
+                                        <select class="niceSelect">
+                                        <option value="1">@Localizer["Banner_TravelType"]</option>
+                                        <option value="2">@Localizer["Banner_CityTour"]</option>
+                                        <option value="3">@Localizer["Banner_FamilyTour"]</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-box">
+                                        <select class="niceSelect">
+                                        <option value="1">@Localizer["Banner_TourDuration"]</option>
+                                        <option value="2">@Localizer["Banner_5Days"]</option>
+                                        <option value="3">@Localizer["Banner_7Days"]</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group mb-0 text-center d-flex">
+                                <a href="/Tour/TourList" class="nir-btn w-100 p-3"><i class="fa fa-search mr-2"></i> @Localizer["Banner_SearchNow"]</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner ends -->

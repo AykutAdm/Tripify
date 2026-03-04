@@ -1,0 +1,115 @@
+@model List<Tripify.WebUI.Dtos.BookingDtos.ResultBookingDto>
+@{
+    ViewData["Title"] = "Rezervasyonlar";
+    Layout = "~/Views/Shared/_TourLayout.cshtml";
+    var tourTitles = ViewBag.TourTitles as IDictionary<string, string> ?? new Dictionary<string, string>();
+}
+
+<div class="page-header mb-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+        <h1 class="page-title h4 mb-1">Rezervasyon Listesi</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Rezervasyonlar</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="card shadow-sm border-0">
+    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-calendar2-check text-secondary"></i>
+            <span class="fw-semibold">Gelen Rezervasyonlar</span>
+            <span class="badge bg-light text-muted border">@Model?.Count ?? 0 kayıt</span>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        @if (Model == null || !Model.Any())
+        {
+            <div class="p-4 text-center text-muted">
+                <i class="bi bi-emoji-frown mb-2" style="font-size:2rem;"></i>
+                <p class="mb-1">Henüz kayıtlı bir rezervasyon bulunmuyor.</p>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Tur</th>
+                            <th>Müşteri</th>
+                            <th>Tarih Aralığı</th>
+                            <th>Kişi</th>
+                            <th>Toplam Fiyat</th>
+                            <th>Durum</th>
+                            <th style="width:160px;">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OrderByDescending(x => x.BookingDate))
+                        {
+                            var title = tourTitles.ContainsKey(item.TourId ?? string.Empty)
+                            ? tourTitles[item.TourId]
+                            : $"Tur Id: {item.TourId}";
+                            <tr>
+                                <td>
+                                    <div class="fw-semibold">@title</div>
+                                    <div class="text-muted small">@item.TourId</div>
+                                </td>
+                                <td>
+                                    <div class="fw-semibold">@item.FirstName @item.LastName</div>
+                                    <div class="text-muted small">@item.Email</div>
+                                </td>
+                                <td>
+                                    <div class="small">
+                                        @item.CheckInDate.ToString("dd.MM.yyyy") - @item.CheckOutDate.ToString("dd.MM.yyyy")
+                                    </div>
+                                    <div class="text-muted small">Oluşturma: @item.BookingDate.ToString("dd.MM.yyyy")</div>
+                                </td>
+                                <td>@item.NumberOfPeople</td>
+                                <td>@item.TotalPrice.ToString("N2") TL</td>
+                                <td>
+                                    @{
+                                        var status = item.Status ?? "Pending";
+                                        string badgeClass = status switch
+                                        {
+                                            "Approved" => "badge bg-success-subtle text-success",
+                                            "Rejected" => "badge bg-danger-subtle text-danger",
+                                            _ => "badge bg-warning-subtle text-warning"
+                                        };
+                                        string statusText = status switch
+                                        {
+                                            "Approved" => "Onaylandı",
+                                            "Rejected" => "Reddedildi",
+                                            _ => "Beklemede"
+                                        };
+                                    }
+                                    <span class="@badgeClass">@statusText</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex gap-1">
+                                        <a asp-action="StatusMail" asp-controller="AdminBooking"
+                                           asp-route-id="@item.BookingId" asp-route-status="Approved"
+                                           class="btn btn-sm btn-success" title="Onayla ve mail hazırla">
+                                            <i class="bi bi-check-circle"></i>
+                                        </a>
+
+                                        <a asp-action="StatusMail" asp-controller="AdminBooking"
+                                           asp-route-id="@item.BookingId" asp-route-status="Rejected"
+                                           class="btn btn-sm btn-outline-danger" title="Reddet ve mail hazırla">
+                                            <i class="bi bi-x-circle"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+

@@ -1,0 +1,121 @@
+@model List<Tripify.WebUI.ViewComponents.TourDetailViewComponents.WhatToExpectDay>
+
+<!-- AI Generated Content Badge & Card -->
+<div class="card border-0 shadow-lg mb-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="card-body p-4">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <div class="d-flex align-items-center">
+                <div class="ai-badge bg-white rounded-circle p-2 me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fa fa-magic" style="color: #667eea; font-size: 24px;"></i>
+                </div>
+                <div>
+                    <h4 class="text-white mb-0">Neler Bekleyebilirsiniz</h4>
+                    <small class="text-white opacity-75">
+                        <i class="fa fa-robot me-1"></i>AI Destekli İçerik
+                    </small>
+                </div>
+            </div>
+            <span class="badge bg-white text-dark">
+                <i class="fa fa-sparkles me-1"></i>OpenAI
+            </span>
+        </div>
+        <p class="text-white mb-0 opacity-90">
+            Bu turda sizleri neler bekliyor? Yapay zeka destekli günlük planınız:
+        </p>
+    </div>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <div class="ai-content-wrapper mb-4">
+        <div class="accrodion-grp faq-accrodion" data-grp-name="faq-accrodion">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var day = Model[i];
+                var colors = new[] { "#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A" };
+                var bgColor = colors[i % colors.Length];
+                
+                <div class="accrodion @(i == 0 ? "active" : "") mb-3" style="border-left: 4px solid @bgColor;">
+                    <div class="accrodion-title rounded position-relative" style="background: linear-gradient(90deg, @(bgColor)15 0%, white 100%); padding: 20px;">
+                        <div class="d-flex align-items-center">
+                            <div class="day-badge me-3" style="background: @bgColor; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px;">
+                                @day.Day
+                            </div>
+                            <h5 class="mb-0" style="color: #2c3e50; font-weight: 600;">
+                                <i class="fa fa-calendar-check me-2" style="color: @bgColor;"></i>
+                                @day.Title
+                            </h5>
+                        </div>
+                        <i class="fa fa-chevron-down position-absolute" style="right: 20px; top: 50%; transform: translateY(-50%); color: @bgColor; transition: transform 0.3s;"></i>
+                    </div>
+                    <div class="accrodion-content" style="display: @(i == 0 ? "block" : "none"); background: #f8f9fa; border-radius: 0 0 8px 8px;">
+                        <div class="inner p-4">
+                            <div class="d-flex">
+                                <div class="content-icon me-3" style="color: @bgColor; font-size: 24px;">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-0" style="color: #555; line-height: 1.8; font-size: 15px;">@day.Description</p>
+                                    <div class="mt-3">
+                                        <span class="badge" style="background: @bgColor; color: white; padding: 8px 12px;">
+                                            <i class="fa fa-clock me-1"></i>Gün @day.Day
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- AI Info Footer -->
+    <div class="alert alert-light border-0 shadow-sm">
+        <div class="d-flex align-items-center">
+            <i class="fa fa-info-circle me-2" style="color: #667eea; font-size: 20px;"></i>
+            <small class="text-muted">
+                Bu içerik OpenAI teknolojisi kullanılarak tur bilgilerinize özel olarak oluşturulmuştur.
+            </small>
+        </div>
+    </div>
+}
+else
+{
+    <div class="card border-0 shadow-sm">
+        <div class="card-body text-center p-5">
+            <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <h5 class="mb-2">Yapay Zeka İçeriği Hazırlanıyor</h5>
+            <p class="text-muted mb-0">
+                <i class="fa fa-magic me-2"></i>
+                Bu tur için özel içerik oluşturuluyor, lütfen bekleyin...
+            </p>
+        </div>
+    </div>
+}
+
+<style>
+    .ai-content-wrapper .accrodion-title:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .ai-content-wrapper .accrodion.active .accrodion-title .fa-chevron-down {
+        transform: translateY(-50%) rotate(180deg);
+    }
+    
+    .day-badge {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    @@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .ai-content-wrapper .accrodion {
+        animation: fadeIn 0.5s ease-out;
+    }
+</style>
