@@ -64,29 +64,38 @@ Oluşturulan e-posta, **MailKit** kullanılarak müşteriye gönderilir.
 
 ## 🖼️ Ekran Görüntüleri
 
-### 🏠 Ana Sayfa
+### 🏠 Kullanıcı Arayüzü
 
 <div align="center">
-  <img src="Images/AnaSayfa-1.png" alt="Admin Paneli-1" width="800" style="margin: 10px;">
-  <img src="Images/AnaSayfa-2.png" alt="Admin Paneli-2" width="800" style="margin: 10px;">
-  <img src="Images/Register-1.png" alt="Admin Paneli-3" width="800" style="margin: 10px;">
-  <img src="Images/KullanimSartlari.png" alt="Admin Paneli-4" width="800" style="margin: 10px;">
-  <img src="Images/KodDogrulama.png" alt="Admin Paneli-5" width="800" style="margin: 10px;">
-  <img src="Images/Login-1.png" alt="Admin Paneli-6" width="800" style="margin: 10px;">
-  <img src="Images/2FaktorDogrulama.png" alt="Admin Paneli-7" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-01.png" alt="Admin Paneli-1" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-02.png" alt="Admin Paneli-2" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-03.png" alt="Admin Paneli-3" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-04.png" alt="Admin Paneli-4" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-05.png" alt="Admin Paneli-5" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-06.png" alt="Admin Paneli-6" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-07.png" alt="Admin Paneli-7" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-08.png" alt="Admin Paneli-8" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-09.png" alt="Admin Paneli-9" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-10.png" alt="Admin Paneli-10" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-11.png" alt="Admin Paneli-11" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-12.png" alt="Admin Paneli-12" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-13.png" alt="Admin Paneli-13" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-14.png" alt="Admin Paneli-14" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AnaSayfa-15.png" alt="Admin Paneli-15" width="800" style="margin: 10px;">
 </div>
 
 
 ### 🔐 Admin Paneli
 
 <div align="center">
-  <img src="Images/Dashboard-1.png" alt="Admin Paneli-1" width="800" style="margin: 10px;">
-  <img src="Images/Dashboard-ProfileAnalysisWithOpenAI.png" alt="Admin Paneli-9" width="800" style="margin: 10px;">
-  <img src="Images/Dashboard-2.png" alt="Admin Paneli-2" width="800" style="margin: 10px;">
-  <img src="Images/Dashboard-3.png" alt="Admin Paneli-3" width="800" style="margin: 10px;">
-  <img src="Images/Dashboard-MailDetailWithGeminiAI.png" alt="Admin Paneli-4" width="800" style="margin: 10px;">
-  <img src="Images/Dashboard-RealMail.png" alt="Admin Paneli-5" width="800" style="margin: 10px;">
-  <img src="Images/Dashboard-4.png" alt="Admin Paneli-6" width="800" style="margin: 10px;">
-  <img src="Images/Dashboard-5.png" alt="Admin Paneli-7" width="800" style="margin: 10px;">
-  <img src="Images/Dashboard-6.png" alt="Admin Paneli-8" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-01.png" alt="Admin Paneli-1" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-02.png" alt="Admin Paneli-2" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-09.png" alt="Admin Paneli-9" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-10.png" alt="Admin Paneli-10" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-03.png" alt="Admin Paneli-3" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-04.png" alt="Admin Paneli-4" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-05.png" alt="Admin Paneli-5" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-06.png" alt="Admin Paneli-6" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-07-OpenAI.png" alt="Admin Paneli-7" width="800" style="margin: 10px;">
+  <img src="TripifyImages/AdminDashboard-08.png" alt="Admin Paneli-8" width="800" style="margin: 10px;">
 </div>
